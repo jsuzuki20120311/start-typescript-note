@@ -1,0 +1,49 @@
+{
+  "name": "sample-crud-application-client",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build:scss && npm run build:ts",
+    "build:scss": "node-sass ./style/src --output ../server/public/style/dist",
+    "build:ts": "webpack --progress --colors",
+    "watch": "npm run watch:scss & npm run watch:ts",
+    "watch:scss": "node-sass ./style/src --output ../server/public/style/dist --watch",
+    "watch:ts": "webpack --progress --colors --watch"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "dependencies": {
+    "@angular/common": "~2.1.0",
+    "@angular/compiler": "~2.1.0",
+    "@angular/core": "~2.1.0",
+    "@angular/forms": "~2.1.0",
+    "@angular/http": "~2.1.0",
+    "@angular/platform-browser": "~2.1.0",
+    "@angular/platform-browser-dynamic": "~2.1.0",
+    "@angular/router": "~3.1.0",
+    "@angular/upgrade": "~2.1.0",
+    "angular-in-memory-web-api": "~0.1.5",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.2",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.25"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^3.3.32",
+    "@types/core-js": "^0.9.34",
+    "@types/jquery": "^2.0.34",
+    "@types/lodash": "^4.14.40",
+    "@types/reflect-metadata": "0.0.5",
+    "@types/rx": "^2.5.33",
+    "@types/zone.js": "0.0.27",
+    "node-sass": "^4.1.1",
+    "ts-loader": "^0.9.1",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2"
+  }
+}

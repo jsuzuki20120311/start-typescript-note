@@ -1,0 +1,12 @@
+node_modules
+
+.idea
+.vscode
+
+*.js.map
+*.js
+*.iml
+
+!webpack.config.js
+
+db_config.json
