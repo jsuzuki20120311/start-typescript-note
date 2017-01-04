@@ -37,8 +37,8 @@ import {AppState} from "../model/AppState";
               <div class="modal-body">
                   <div class="progress">
                       <div class="progress-bar progress-bar-info
-                      progress-bar-striped active"
-                      style="width: 100%">
+                        progress-bar-striped active"
+                        style="width: 100%">
                       </div>
                   </div>
               </div>

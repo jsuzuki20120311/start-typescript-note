@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
-    "dev": "node-dev ./index.js",
+    "dev": "tsc --watch & node-dev ./index.js",
     "build": "tsc",
     "watch": "tsc --watch"
   },
