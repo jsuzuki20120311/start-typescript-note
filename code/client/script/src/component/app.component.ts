@@ -3,9 +3,9 @@
 import * as $ from 'jquery';
 import 'bootstrap';
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
-import {AppStore} from "../common/AppStore";
-import {AppState} from "../model/AppState";
+import { ActivatedRoute, Router } from '@angular/router';
+import { AppStore } from "../common/AppStore";
+import { AppState } from "../model/AppState";
 
 @Component({
   selector: 'app',
@@ -13,7 +13,8 @@ import {AppState} from "../model/AppState";
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Sample Crud Application</a>
+          <a class="navbar-brand" [routerLink]="['/']">Sample Crud Application</a>
+          <a class="navbar-brand" [routerLink]="['/article-editor']">新規作成</a>
         </div>
       </div>
     </nav>
@@ -45,14 +46,17 @@ import {AppState} from "../model/AppState";
           </div>
       </div>
     </div>
-    
   `
 })
 export class AppComponent implements OnInit, OnDestroy {
 
   private htmlElement: HTMLElement;
 
-  constructor(private router: Router, private elementRef: ElementRef) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute, 
+    private elementRef: ElementRef
+  ) {
     this.htmlElement = this.elementRef.nativeElement;
   }
 

@@ -7,11 +7,15 @@ export class Routes {
 
   public static readonly CONFIG = [
     {
+      path: '',
+      component: ArticleListComponent
+    },
+    {
       path: 'article-list',
       component: ArticleListComponent
     },
     {
-      path: '',
+      path: 'article-editor',
       component: ArticleEditorComponent
     }
   ];
