@@ -90,12 +90,12 @@ export class ArticleListComponent implements OnInit, OnDestroy {
     this.isProcessing = currentAppState.isProcessing;
   }
 
-  private titleChanged(event: any): void {
-    this.selectedArticle.title = event.target.value;
+  private titleChanged(event: Event): void {
+    this.selectedArticle.title = (event.target as HTMLInputElement).value;
   }
 
-  private bodyChanged(event: any): void {
-    this.selectedArticle.body = event.target.value;
+  private bodyChanged(event: Event): void {
+    this.selectedArticle.body = (event.target as HTMLInputElement).value;
   }
 
   private registerButtonClicked(): void {
