@@ -41,20 +41,6 @@ export class AppStore {
     return this.appState;
   }
 
-  // applyAppState(eventName: string, appState: AppState): void {
-  //   const emitInfo = this.emitInfoList.find((emitInfo: EmitInfo) => {
-  //     return emitInfo.eventName === eventName
-  //   });
-  //   if (!emitInfo) {
-  //     return;
-  //   }
-  //   const beforeAppState = this.appState;
-  //   this.appState = appState;
-  //   emitInfo.handlers.forEach((handler: Handler) => {
-  //     handler(eventName, beforeAppState, this.appState);
-  //   });
-  // }
-
   applyAppState(eventName: string, chagedState: any): void {
     const emitInfo = this.emitInfoList.find((emitInfo: EmitInfo) => {
       return emitInfo.eventName === eventName
