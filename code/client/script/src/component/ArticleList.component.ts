@@ -14,7 +14,6 @@ import { ProcessingModalService } from "../service/ProcessingModalService";
   providers: [ArticleService, ProcessingModalService],
   template: `
     <h2>記事</h2>
-    <button type="button" class="btn btn-primary" (click)="registerButtonClicked()" [attr.disabled]="isProcessing ? true : null">投稿</button>
     <table class="table" *ngIf="articles">
       <tr>
         <th>id</th>
@@ -78,6 +77,7 @@ export class ArticleListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.onChangeAppState = this.onChangeAppState.bind(this);
     AppStore.getInstance().registerHandler('CHANGE', this.onChangeAppState);
+    this.processingModalService.setProcessingFlag(true);
     this.articleService.findAllArticles();
   }
 
@@ -96,15 +96,6 @@ export class ArticleListComponent implements OnInit, OnDestroy {
 
   private bodyChanged(event: Event): void {
     this.selectedArticle.body = (event.target as HTMLInputElement).value;
-  }
-
-  private registerButtonClicked(): void {
-    this.processingModalService.setProcessingFlag(true);
-    const emptyArticle = {
-      title: '名称未設定',
-      body: '',
-    };
-    this.articleService.create(emptyArticle);
   }
 
   private viewDetailButtonClicked(article: RegisteredArticle): void {
