@@ -19,65 +19,51 @@ export class ArticleService {
 
   }
 
-  findArticles(offset: number, limit: number): void {
+  findArticles(offset: number, limit: number): Observable<RegisteredArticle[]> {
     const url = `${ArticleService.API_URL}?offset=${offset}&limit=${limit}`;
-    this.http.get(encodeURI(url))
+    return this.http.get(encodeURI(url))
       .map(this.extractData)
-      .catch(this.handleError)
-      .subscribe((result) => {
-        AppStore.getInstance().applyAppState('CHANGE', {
-          articles: (<RegisteredArticle[]> result),
-          isProcessing: false
-        });
-      });
+      .catch(this.handleError);
   }
 
-  findAllArticles(): void {
+  findArticleById(id: number): Observable<RegisteredArticle[]> {
+    const url = `${ArticleService.API_URL}/${id}`;
+    return this.http.get(encodeURI(url))
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  findAllArticles(): Observable<RegisteredArticle[]> {
     const url = `${ArticleService.API_URL}/all`;
-    this.http.get(encodeURI(url))
+    return this.http.get(encodeURI(url))
       .map(this.extractData)
-      .catch(this.handleError)
-      .subscribe((result) => {
-        AppStore.getInstance().applyAppState('CHANGE', {
-          articles: (<RegisteredArticle[]> result),
-          isProcessing: false
-        });
-      });
+      .catch(this.handleError);
   }
 
-  create(article: Article): void {
+  create(article: Article): Observable<Response> {
     const sendData = JSON.stringify(article);
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const requestOptions = new RequestOptions({ headers: headers });
-    this.http.put(encodeURI(ArticleService.API_URL), sendData, requestOptions)
+    return this.http.put(encodeURI(ArticleService.API_URL), sendData, requestOptions)
       .map(this.extractData)
-      .catch(this.handleError)
-      .subscribe(() => {
-        this.findAllArticles();
-      });
+      .catch(this.handleError);
   }
 
-  update(id: number, article: Article): void {
+  update(id: number, article: Article): Observable<Response> {
     const url = `${ArticleService.API_URL}/${id}`;
     const sendData = JSON.stringify(article);
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const requestOptions = new RequestOptions({ headers: headers });
-    this.http.post(encodeURI(url), sendData, requestOptions)
+    return this.http.post(encodeURI(url), sendData, requestOptions)
       .map(this.extractData)
-      .catch(this.handleError)
-      .subscribe(() => {
-        this.findAllArticles();
-      });
+      .catch(this.handleError);
   }
 
-  delete(id: number): void {
+  delete(id: number): Observable<Response> {
     const url = `${ArticleService.API_URL}/${id}`;
-    this.http.delete(encodeURI(url))
+    return this.http.delete(encodeURI(url))
       .map(this.extractData)
-      .catch(this.handleError)
-      .subscribe(() => {
-        this.findAllArticles();
-      });
+      .catch(this.handleError);
   }
 
   private extractData(res: Response): any {

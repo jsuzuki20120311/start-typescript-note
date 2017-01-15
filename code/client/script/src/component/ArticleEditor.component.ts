@@ -1,16 +1,16 @@
 'use strict';
 
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { ProcessingModalAction } from '../action/ProcessingModalAction';
 import { AppState } from '../model/AppState';
-import { AppStore } from '../common/AppStore';
-import { ArticleService } from "../service/ArticleService";
-import { ProcessingModalService } from '../service/ProcessingModalService';
 import { Article } from '../model/Article';
 import { RegisteredArticle } from "../model/RegisteredArticle";
+import { AppStore } from '../common/AppStore';
+import { ArticleService } from "../service/ArticleService";
 
 @Component({
   selector: 'article-editor',
-  providers: [ ArticleService, ProcessingModalService ],
+  providers: [ ArticleService ],
   template: `
     <div>
       <input type="text" value="{{ article.title }}" (change)="titleChanged($event)" [attr.disabled]="isProcessing ? true : null">
@@ -32,18 +32,17 @@ export class ArticleEditorComponent {
   private isCompleted: boolean;
 
   constructor(
-    private articleService: ArticleService,
-    private processingModalService: ProcessingModalService
+    private articleService: ArticleService
   ) {
+  }
+
+  ngOnInit(): void {
     this.article = {
       title: '',
       body: ''
     };
     this.isProcessing = false;
     this.isCompleted = false;
-  }
-
-  ngOnInit(): void {
     this.onChangeAppState = this.onChangeAppState.bind(this);
     AppStore.getInstance().registerHandler('CHANGE', this.onChangeAppState);
   }
@@ -61,8 +60,10 @@ export class ArticleEditorComponent {
   }
 
   private registerButtonClicked(): void {
-    this.processingModalService.setProcessingFlag(true);
-    this.articleService.create(this.article);
+    ProcessingModalAction.setProcessingFlag(true);
+    this.articleService.create(this.article).subscribe(() => {
+      ProcessingModalAction.setProcessingFlag(false);
+    });
   }
 
   private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState): void {

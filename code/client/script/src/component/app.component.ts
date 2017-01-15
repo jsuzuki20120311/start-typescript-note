@@ -69,11 +69,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState) {
-    if (currentAppState.isProcessing) {
-      $(this.htmlElement).find('.sample-app-modal').modal('show');
-    } else {
-      $(this.htmlElement).find('.sample-app-modal').modal('hide');
-    }
+    const modalState = currentAppState.isProcessing ? 'show' : 'hide';
+    $(this.htmlElement).find('.sample-app-modal').modal(modalState);
   }
 
 }

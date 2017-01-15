@@ -2,6 +2,7 @@
 
 import { ArticleListComponent } from './component/ArticleList.component';
 import { ArticleEditorComponent } from './component/ArticleEditor.component';
+import { UpdateArticlePageComponent } from './component/update-article-page.component';
 
 export class Routes {
 
@@ -17,6 +18,10 @@ export class Routes {
     {
       path: 'article-editor',
       component: ArticleEditorComponent
+    },
+    {
+      path: 'update-article/:id',
+      component: UpdateArticlePageComponent
     }
   ];
 
