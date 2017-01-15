@@ -1,7 +1,6 @@
 'use strict';
 
 import * as $ from 'jquery';
-import 'bootstrap';
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { AppState } from "../model/AppState";
 import { AppStore } from '../common/AppStore';

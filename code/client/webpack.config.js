@@ -4,6 +4,11 @@ var webpack = require('webpack');
 module.exports = {
   devtool: "#source-map",
   entry: './script/src/main.ts',
+  externals: {
+    // require("jquery") is external and available
+    //  on the global var jQuery
+    "jquery": "jQuery"
+  },
   module: {
     loaders: [
       {
@@ -16,13 +21,7 @@ module.exports = {
     path: '../server/public/script/dist/',
     filename: 'bundle.js'
   },
-  plugins: [
-    new webpack.ProvidePlugin({
-      jQuery: "jquery",
-      $: "jquery"
-    })
-  ],
   resolve: {
     extensions: ['', '.ts', '.js']
-  }
+  },
 };

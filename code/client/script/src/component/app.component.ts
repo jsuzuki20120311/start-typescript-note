@@ -1,7 +1,6 @@
 'use strict';
 
 import * as $ from 'jquery';
-import 'bootstrap';
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppStore } from "../common/AppStore";
@@ -71,9 +70,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState) {
     if (currentAppState.isProcessing) {
-      ($(this.htmlElement.querySelector('.sample-app-modal')) as any).modal('show');
+      $(this.htmlElement).find('.sample-app-modal').modal('show');
     } else {
-      ($(this.htmlElement.querySelector('.sample-app-modal')) as any).modal('hide');
+      $(this.htmlElement).find('.sample-app-modal').modal('hide');
     }
   }
 

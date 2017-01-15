@@ -1,7 +1,6 @@
 'use strict';
 
 import * as $ from 'jquery';
-import 'bootstrap';
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { AppState } from "../model/AppState";
 import { AppStore } from '../common/AppStore';
@@ -100,7 +99,7 @@ export class ArticleListComponent implements OnInit, OnDestroy {
 
   private viewDetailButtonClicked(article: RegisteredArticle): void {
     this.selectedArticle = Object.assign({}, article);
-    ($(this.htmlElement.querySelector('.script-article-edit-modal')) as any).modal('show');
+    $(this.htmlElement).find('.script-article-edit-modal').modal('show');
   }
 
   private updateButtonClicked(article: RegisteredArticle): void {
