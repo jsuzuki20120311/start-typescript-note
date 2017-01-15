@@ -1,12 +1,7 @@
-var path = require('path');
-var webpack = require('webpack');
-
 module.exports = {
-  devtool: "#source-map",
+  devtool: "source-map",
   entry: './script/src/main.ts',
   externals: {
-    // require("jquery") is external and available
-    //  on the global var jQuery
     "jquery": "jQuery"
   },
   module: {
@@ -23,5 +18,5 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.ts', '.js']
-  },
+  }
 };
