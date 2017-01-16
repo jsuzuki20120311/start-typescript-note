@@ -19,6 +19,7 @@ import { ProcessingModalAction } from '../action/ProcessingModalAction';
       <input type="text" value="{{ article.title }}" (change)="titleChanged($event)" [attr.disabled]="isProcessing ? true : null">
       <input type="text" value="{{ article.body }}" (change)="bodyChanged($event)" [attr.disabled]="isProcessing ? true : null">
       <button (click)="updateButtonClicked()">更新</button>
+      <button (click)="deleteButtonClicked()">削除</button>
    </div>
   `
 })
@@ -56,6 +57,13 @@ export class UpdateArticlePageComponent implements OnInit {
   private updateButtonClicked(): void {
     ProcessingModalAction.setProcessingFlag(true);
     this.articleService.update(this.article.id, this.article).subscribe(() => {
+      ProcessingModalAction.setProcessingFlag(false);
+    });
+  }
+
+  private deleteButtonClicked(): void {
+    ProcessingModalAction.setProcessingFlag(true);
+    this.articleService.delete(this.article.id).subscribe(() => {
       ProcessingModalAction.setProcessingFlag(false);
     });
   }
