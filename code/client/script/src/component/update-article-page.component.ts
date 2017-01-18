@@ -14,16 +14,23 @@ import { ProcessingModalAction } from '../action/ProcessingModalAction';
   selector: 'update-article-page',
   providers: [ ArticleService ],
   template: `
-    <h2>記事更新</h2>
-    <div *ngIf="article">
-      <input type="text" value="{{ article.title }}" (change)="titleChanged($event)" [attr.disabled]="isProcessing ? true : null">
-      <input type="text" value="{{ article.body }}" (change)="bodyChanged($event)" [attr.disabled]="isProcessing ? true : null">
-      <button (click)="updateButtonClicked()">更新</button>
-      <button (click)="deleteButtonClicked()">削除</button>
-   </div>
+    <div *ngIf="!isCompleted">
+      <h2>記事更新</h2>
+      <div *ngIf="article">
+        <input type="text" value="{{ article.title }}" (change)="titleChanged($event)" [attr.disabled]="isProcessing ? true : null">
+        <input type="text" value="{{ article.body }}" (change)="bodyChanged($event)" [attr.disabled]="isProcessing ? true : null">
+        <button (click)="updateButtonClicked()">更新</button>
+        <button (click)="deleteButtonClicked()">削除</button>
+      </div>
+    </div>
+    <div *ngIf="isCompleted">
+      完了しました。
+    </div>
   `
 })
 export class UpdateArticlePageComponent implements OnInit {
+
+  private isCompleted: boolean;
 
   private isProcessing: boolean;
 
@@ -58,6 +65,7 @@ export class UpdateArticlePageComponent implements OnInit {
     ProcessingModalAction.setProcessingFlag(true);
     this.articleService.update(this.article.id, this.article).subscribe(() => {
       ProcessingModalAction.setProcessingFlag(false);
+      this.isCompleted = true;
     });
   }
 
@@ -65,6 +73,7 @@ export class UpdateArticlePageComponent implements OnInit {
     ProcessingModalAction.setProcessingFlag(true);
     this.articleService.delete(this.article.id).subscribe(() => {
       ProcessingModalAction.setProcessingFlag(false);
+      this.isCompleted = true;
     });
   }
 
