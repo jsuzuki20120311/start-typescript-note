@@ -40,8 +40,8 @@ export class UpdateArticlePageComponent implements OnInit {
     ProcessingModalAction.setProcessingFlag(true);
     this.activeRoute.params.subscribe((params) => {
       this.articleService.findArticleById(parseInt(params['id'], 10)).subscribe((articles) => {
-         this.article = articles[0];
-         ProcessingModalAction.setProcessingFlag(false);
+        this.article = articles[0];
+        ProcessingModalAction.setProcessingFlag(false);
       });
     });
   }
