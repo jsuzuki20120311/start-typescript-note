@@ -11,7 +11,7 @@ import { ProcessingModalAction } from '../action/ProcessingModalAction';
 
 @Component({
   selector: 'article-list',
-  providers: [ArticleService],
+  providers: [ ArticleService ],
   template: `
     <h2>記事</h2>
     <table class="table" *ngIf="articles">
@@ -20,16 +20,20 @@ import { ProcessingModalAction } from '../action/ProcessingModalAction';
         <th>タイトル</th>
         <th>作成日時</th>
         <th>更新日時</th>
+        <th>操作</th>
       </tr>
       <tr *ngFor="let article of articles">
         <td>{{ article.id }}</td>
-        <td>
-          <a [routerLink]="['/update-article', article.id]">
-            {{ article.title }}
-          </a>
-        </td>
+        <td>{{ article.title }}</td>
         <td>{{ article.createdAt }}</td>
         <td>{{ article.updatedAt }}</td>
+        <td>
+          <a [routerLink]="['/update-article', article.id]">
+            <button class="btn btn-primary"> 
+              編集
+            </button>
+          </a>
+        </td>
       </tr>
     </table>
   `

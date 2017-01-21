@@ -14,13 +14,40 @@ import { ProcessingModalAction } from '../action/ProcessingModalAction';
   selector: 'update-article-page',
   providers: [ ArticleService ],
   template: `
+    <h2>記事の更新</h2>
     <div *ngIf="!isCompleted">
-      <h2>記事更新</h2>
-      <div *ngIf="article">
-        <input type="text" value="{{ article.title }}" (change)="titleChanged($event)" [attr.disabled]="isProcessing ? true : null">
-        <input type="text" value="{{ article.body }}" (change)="bodyChanged($event)" [attr.disabled]="isProcessing ? true : null">
-        <button (click)="updateButtonClicked()">更新</button>
-        <button (click)="deleteButtonClicked()">削除</button>
+      <div *ngIf="article" class="container">
+        <form>
+          <div class="form-group">
+            <label>記事タイトル</label>
+            <input type="text" 
+                placeholder="タイトル"
+                class="form-control" 
+                value="{{ article.title }}"
+                (change)="titleChanged($event)"
+                [attr.disabled]="isProcessing ? true : null">
+          </div>
+          <div class="form-group">
+            <label>本文</label>
+            <textarea placeholder="本文" 
+                rows="10"
+                (change)="bodyChanged($event)"
+                class="form-control" 
+                value="{{ article.body }}"
+                [attr.disabled]="isProcessing ? true : null">
+            </textarea>
+          </div>
+          <button class="btn btn-primary"
+              [attr.disabled]="isProcessing ? true : null"
+              (click)="updateButtonClicked()">
+            更新
+          </button>
+          <button class="btn btn-danger" 
+              [attr.disabled]="isProcessing ? true : null"
+              (click)="deleteButtonClicked()">
+            削除
+          </button>
+        </form>
       </div>
     </div>
     <div *ngIf="isCompleted">

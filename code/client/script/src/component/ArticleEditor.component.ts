@@ -12,14 +12,37 @@ import { ArticleService } from "../service/ArticleService";
   selector: 'article-editor',
   providers: [ ArticleService ],
   template: `
+    <h2>記事の作成</h2>
     <div *ngIf="!isCompleted">
-      <input type="text" value="{{ article.title }}" (change)="titleChanged($event)" [attr.disabled]="isProcessing ? true : null">
-      <input type="text" value="{{ article.body }}" (change)="bodyChanged($event)" [attr.disabled]="isProcessing ? true : null">
-      <p class="text-center">
-        <button class="btn btn-primary" data-dismiss="modal" (click)="registerButtonClicked()" [attr.disabled]="isProcessing ? true : null">
-          登録
-        </button>
-      </p>
+      <div class="container">
+        <form>
+          <div class="form-group">
+            <label>記事タイトル</label>
+            <input type="text" 
+                placeholder="タイトル"
+                class="form-control" 
+                value="{{ article.title }}" 
+                (change)="titleChanged($event)" 
+                [attr.disabled]="isProcessing ? true : null">
+          </div>
+          <div class="form-group">
+            <label>本文</label>
+            <textarea placeholder="本文" 
+                rows="10"
+                (change)="bodyChanged($event)"
+                class="form-control" 
+                value="{{ article.body }}"
+                [attr.disabled]="isProcessing ? true : null">
+            </textarea>
+          </div>
+          <button class="btn btn-primary" 
+              data-dismiss="modal" 
+              (click)="registerButtonClicked()" 
+              [attr.disabled]="isProcessing ? true : null">
+            登録
+          </button>
+        </form>
+      </div>
     </div>
     <div *ngIf="isCompleted">
       完了しました。
