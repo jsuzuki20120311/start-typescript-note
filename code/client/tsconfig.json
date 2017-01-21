@@ -6,6 +6,9 @@
     "removeComments": false,
     "sourceMap": true,
     "target": "ES5",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "module": "commonjs",
     "noEmit": false,
     "noEmitOnError": true,
@@ -15,9 +18,6 @@
     "preserveConstEnums": true,
     "project": "./"
   },
-  "typeRoots": [
-    "./node_modules/@types"
-  ],
   "include": [
     "./script/src/**/*.ts"
   ],
