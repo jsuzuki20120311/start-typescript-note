@@ -22,7 +22,7 @@ import { ArticleService } from "../service/ArticleService";
       </p>
     </div>
     <div *ngIf="isCompleted">
-      完了しました。      
+      完了しました。
     </div>
   `
 })
