@@ -12,7 +12,7 @@ import { ArticleService } from "../service/ArticleService";
   selector: 'article-editor',
   providers: [ ArticleService ],
   template: `
-    <div>
+    <div *ngIf="!isCompleted">
       <input type="text" value="{{ article.title }}" (change)="titleChanged($event)" [attr.disabled]="isProcessing ? true : null">
       <input type="text" value="{{ article.body }}" (change)="bodyChanged($event)" [attr.disabled]="isProcessing ? true : null">
       <p class="text-center">
@@ -20,6 +20,9 @@ import { ArticleService } from "../service/ArticleService";
           登録
         </button>
       </p>
+    </div>
+    <div *ngIf="isCompleted">
+      完了しました。      
     </div>
   `
 })
@@ -63,6 +66,7 @@ export class ArticleEditorComponent {
     ProcessingModalAction.setProcessingFlag(true);
     this.articleService.create(this.article).subscribe(() => {
       ProcessingModalAction.setProcessingFlag(false);
+      this.isCompleted = true;
     });
   }
 
