@@ -89,6 +89,7 @@ export class UpdateArticlePageComponent implements OnInit {
   }
 
   private updateButtonClicked(): void {
+    this.isProcessing = true;
     ProcessingModalAction.setProcessingFlag(true);
     this.articleService.update(this.article.id, this.article).subscribe(() => {
       ProcessingModalAction.setProcessingFlag(false);
@@ -97,6 +98,7 @@ export class UpdateArticlePageComponent implements OnInit {
   }
 
   private deleteButtonClicked(): void {
+    this.isProcessing = true;
     ProcessingModalAction.setProcessingFlag(true);
     this.articleService.delete(this.article.id).subscribe(() => {
       ProcessingModalAction.setProcessingFlag(false);
