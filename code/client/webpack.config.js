@@ -1,6 +1,10 @@
+var webpack = require('webpack');
 module.exports = {
-  devtool: "source-map",
-  entry: './script/src/main.ts',
+  devtool: 'source-map',
+  entry: {
+    bundle: './script/src/main.ts',
+    vendor: './script/src/vendor.ts'
+  },
   externals: {
     "jquery": "jQuery"
   },
@@ -14,8 +18,13 @@ module.exports = {
   },
   output: {
     path: '../server/public/script/dist/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['bundle', 'vendor']
+    })
+  ],
   resolve: {
     extensions: ['', '.ts', '.js']
   }
