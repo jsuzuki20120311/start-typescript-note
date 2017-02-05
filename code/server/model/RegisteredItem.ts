@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * 登録済情報インタフェース
+ */
 export interface RegisteredItem {
 
   id: number,

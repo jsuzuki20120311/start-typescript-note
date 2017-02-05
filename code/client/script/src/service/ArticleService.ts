@@ -13,34 +13,33 @@ import { RegisteredArticle } from "../model/RegisteredArticle";
 @Injectable()
 export class ArticleService {
 
-  private static readonly API_URL = 'http://localhost:3000/sample-crud-app/api/v1/article';
+  private static readonly API_URL = 'http://localhost:3000/api/v1/article';
 
   constructor(private http: Http) {
-
   }
 
-  findArticles(offset: number, limit: number): Observable<RegisteredArticle[]> {
+  findArticles(offset: number, limit: number): Observable<any> {
     const url = `${ArticleService.API_URL}?offset=${offset}&limit=${limit}`;
     return this.http.get(encodeURI(url))
       .map(this.extractData)
       .catch(this.handleError);
   }
 
-  findArticleById(id: number): Observable<RegisteredArticle[]> {
+  findArticleById(id: number): Observable<any> {
     const url = `${ArticleService.API_URL}/${id}`;
     return this.http.get(encodeURI(url))
       .map(this.extractData)
       .catch(this.handleError);
   }
 
-  findAllArticles(): Observable<RegisteredArticle[]> {
+  findAllArticles(): Observable<any> {
     const url = `${ArticleService.API_URL}/all`;
     return this.http.get(encodeURI(url))
       .map(this.extractData)
       .catch(this.handleError);
   }
 
-  create(article: Article): Observable<Response> {
+  create(article: Article): Observable<any> {
     const sendData = JSON.stringify(article);
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const requestOptions = new RequestOptions({ headers: headers });
@@ -49,7 +48,7 @@ export class ArticleService {
       .catch(this.handleError);
   }
 
-  update(id: number, article: Article): Observable<Response> {
+  update(id: number, article: Article): Observable<any> {
     const url = `${ArticleService.API_URL}/${id}`;
     const sendData = JSON.stringify(article);
     const headers = new Headers({ 'Content-Type': 'application/json' });
@@ -59,7 +58,7 @@ export class ArticleService {
       .catch(this.handleError);
   }
 
-  delete(id: number): Observable<Response> {
+  delete(id: number): Observable<any> {
     const url = `${ArticleService.API_URL}/${id}`;
     return this.http.delete(encodeURI(url))
       .map(this.extractData)
