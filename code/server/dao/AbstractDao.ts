@@ -1,10 +1,10 @@
 import * as mysql from 'mysql';
-import DbConfigManager from '../config/DbConfigManager';
+import { DbConfigManager } from '../config/DbConfigManager';
 
 export abstract class AbstractDao {
 
   protected createConnection(): mysql.IConnection {
-    let connection = mysql.createConnection(DbConfigManager.getConfig());
+    const connection = mysql.createConnection(DbConfigManager.getConfig());
     connection.connect((error) => {
       if (error) {
         console.error(error);

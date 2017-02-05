@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import { DbConfig } from './DbConfig';
 
-export default class DbConfigManager {
+export class DbConfigManager {
 
   private static dbConfig: DbConfig;
 
