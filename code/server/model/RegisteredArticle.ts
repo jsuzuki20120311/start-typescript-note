@@ -1,5 +1,3 @@
-'use strict';
-
 import { Article } from "./Article";
 import { RegisteredItem } from "./RegisteredItem";
 

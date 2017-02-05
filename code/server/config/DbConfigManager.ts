@@ -1,7 +1,5 @@
-'use strict';
-
 import * as fs from 'fs';
-import DbConfig from './DbConfig';
+import { DbConfig } from './DbConfig';
 
 export default class DbConfigManager {
 

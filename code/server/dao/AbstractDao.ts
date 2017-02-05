@@ -1,5 +1,3 @@
-'use strict';
-
 import * as mysql from 'mysql';
 import DbConfigManager from '../config/DbConfigManager';
 

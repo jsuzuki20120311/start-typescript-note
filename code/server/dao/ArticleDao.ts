@@ -1,5 +1,3 @@
-'use strict';
-
 import * as mysql from 'mysql';
 import { AbstractDao } from './AbstractDao';
 import { Article } from '../model/Article';
