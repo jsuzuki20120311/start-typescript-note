@@ -1,5 +1,3 @@
-'use strict';
-
 import { Injectable } from '@angular/core';
 import { AppStore } from "../common/AppStore";
 

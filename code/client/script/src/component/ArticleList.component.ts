@@ -1,6 +1,3 @@
-'use strict';
-
-import * as $ from 'jquery';
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { AppStore } from '../common/AppStore';
 import { ArticleService } from "../service/ArticleService";

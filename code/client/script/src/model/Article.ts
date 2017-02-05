@@ -1,5 +1,6 @@
-'use strict';
-
+/**
+ * 記事
+ */
 export interface Article {
 
   title: string;

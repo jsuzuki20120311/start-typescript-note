@@ -1,5 +1,3 @@
-'use strict';
-
 import * as $ from 'jquery';
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';

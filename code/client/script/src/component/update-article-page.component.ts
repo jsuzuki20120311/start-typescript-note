@@ -1,13 +1,7 @@
-'use strict';
-
-import * as $ from 'jquery';
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
-import { AppState } from "../model/AppState";
-import { AppStore } from '../common/AppStore';
+import { Component, OnInit } from '@angular/core';
 import { ArticleService } from "../service/ArticleService";
 import { RegisteredArticle } from "../model/RegisteredArticle";
-import { ProcessingModalService } from "../service/ProcessingModalService";
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ProcessingModalAction } from '../action/ProcessingModalAction';
 
 @Component({

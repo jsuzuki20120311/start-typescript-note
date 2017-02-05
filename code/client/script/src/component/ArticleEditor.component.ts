@@ -1,5 +1,3 @@
-'use strict';
-
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { ProcessingModalAction } from '../action/ProcessingModalAction';
 import { AppState } from '../model/AppState';

@@ -1,5 +1,3 @@
-'use strict';
-
 import * as express from 'express';
 import v1 from './v1';
 
