@@ -39,6 +39,3 @@ article.delete('/:id', (req, res) => {
 });
 
 export default article;
-
-// article.use('/sample-crud-article', express.static(__dirname + '/public/'));
-// article.use('/sample-crud-article/:param', express.static('./public/'));
