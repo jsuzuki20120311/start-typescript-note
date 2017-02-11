@@ -1,8 +1,8 @@
 import * as $ from 'jquery';
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AppStore } from "../common/AppStore";
-import { AppState } from "../model/AppState";
+import { AppStore } from '../common/AppStore';
+import { AppState } from '../model/AppState';
 
 @Component({
   selector: 'app',

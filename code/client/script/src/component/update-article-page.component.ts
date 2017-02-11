@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticleService } from "../service/ArticleService";
-import { RegisteredArticle } from "../model/RegisteredArticle";
 import { ActivatedRoute } from '@angular/router';
 import { ProcessingModalAction } from '../action/ProcessingModalAction';
+import { RegisteredArticle } from '../model/RegisteredArticle';
+import { ArticleService } from '../service/ArticleService';
 
 @Component({
   selector: 'update-article-page',
