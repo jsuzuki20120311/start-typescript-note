@@ -8,6 +8,7 @@ import { AppComponent } from './component/app.component';
 import { ArticleListComponent } from './component/ArticleList.component';
 import { ArticleEditorComponent } from './component/ArticleEditor.component';
 import { UpdateArticlePageComponent } from './component/update-article-page.component';
+import { Config } from './Config';
 
 @NgModule({
   bootstrap: [ AppComponent ],
