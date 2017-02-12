@@ -3,14 +3,6 @@
 
 ![こんにちは、TypeScript](./image/konnitihaTypeScript.png "画像タイトル")
 
-こんにちは、Technology Lab の鈴木です。
-
-ここ最近TypeScriptにハマっているのと、以前社内でTypeScriptに関するLTを行ったので、その内容を元にTypeScriptの開発環境を構築する手順と、個人的に重要だと思うTypeScriptの要素、自分の備忘録も兼ねて書いていきます。
-
-
-
-この記事が、これからTypeScriptをはじめようと考えている人の参考になれば幸いです。
-
 
 **さあTypeScriptを始めましょう**
 
@@ -38,14 +30,25 @@
    - ライブラリのインストール
  
    - 型定義のインストール
-   
-   - インストールしたExpressをTypeScriptで使用する
-
+ 
  * フロントエンド開発の環境構築
 
    - Webpackの設定
 
-   - Angular2 をTypeScriptで使用する
+   - package.jsonの設定
+
+   - 
+
+ * バックエンドの環境構築
+
+   - 各種設定ファイル
+
+   - Expressのインストール
+ 
+   - 
+ 
+   - 
+
 
 
 
@@ -127,30 +130,28 @@ tsconfig.jsonという名前のファイルをプロジェクトディレクト�
 とりあえず今回は以下の内容で作成します。
 
 ```json
-  {
-    "compilerOptions": {
-        "declaration" : false,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "removeComments": false,
-        "sourceMap": true,
-        "target": "ES5",
-        "module": "commonjs",
-        "project": "./",
-        "noEmit": false,
-        "noEmitOnError": true,
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "noLib" : false,
-        "preserveConstEnums": true
-    },
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["es2015", "dom"],
     "typeRoots": [
-      "node_modules/@types"
+      "./node_modules/@types"
     ],
-    "exclude": [
-      "node_modules"
-    ]
-  }
+    "alwaysStrict": true
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules",
+    "**/*-aot.ts"
+  ]
+}
 ```
 
 
@@ -503,10 +504,10 @@ TypeScriptではJavaScriptのライブラリを使用できます。しかし、
 
 ### ライブラリのインストール
 
-ここではExpressのインストールを例に手順をみていきます。まずは、Express本体をインストールします。
+ここではjQueryのインストールを例に手順をみていきます。まずは、Express本体をインストールします。
 
 ```shell
-$ npm install express --save
+$ npm install jquery --save
 ```
 
 ### 型定義のインストール
@@ -514,36 +515,12 @@ $ npm install express --save
 次に型定義ファイルをインストールします。型定義のインストールには、以前は tsd や Typings などのツールを使用していましたが、2.0からは npm だけで完結するようになりました。
 
 ```shell
-$ npm install @types/express --save
+$ npm install @types/jquery --save
 ```
 
 型定義ファイルが既に存在するかどうかは
 [TypeSearch](http://microsoft.github.io/TypeSearch/)
 で検索できます。
-
-
-### インストールしたExpressを使用する
-
-上記の通りExpressとExpressの型定義がインストールできていれば、hoge.tsを以下の通りに書き換え実行できます。
-
-hoge.ts
-
-```typescript
-import * as express from 'express';
-
-let app = express();
-app.get('/', (req, res) => {
-  res.send('Express');
-});
-
-app.listen(3000, () => {
-  console.log('Express application run!');
-});
-```
-
-実行後ブラウザで http://localhost:3000 にアクセスすると以下のような画面が表示されます。
-
-![Express起動](./image/2016-10-11 1.35.02.png "画像タイトル")
 
 
 ## フロントエンド開発の環境構築
@@ -564,26 +541,37 @@ $ npm install ts-loader --save-d
 
 webpack.config.js
 
-```js
-var path = require('path');
+```javascript
+var webpack = require('webpack');
 module.exports = {
-	entry: './script/main.ts',
-	devtool: "#source-map",
-	output: {
-		path: __dirname,
-		filename: './script/dist/bundle.js'
-	},
-	module: {
-		loaders: [
-			{
-				test: /\.ts$/,
-				loader: 'ts-loader'
-			}
-		]
-	},
-	resolve: {
-		extensions: ['', '.ts', '.js']
-	}
+  devtool: 'source-map',
+  entry: {
+    bundle: './script/src/main.ts',
+    vendor: './script/src/vendor.ts'
+  },
+  externals: {
+    "jquery": "jQuery"
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader'
+      }
+    ]
+  },
+  output: {
+    path: '../server/public/script/dist/',
+    filename: '[name].js'
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['bundle', 'vendor']
+    })
+  ],
+  resolve: {
+    extensions: ['', '.ts', '.js']
+  }
 };
 ```
 
@@ -594,11 +582,15 @@ module.exports = {
 
 ```json
 {
-  "name": "angular-test",
+  "name": "sample-crud-application-client",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --progress --colors",
-    "build:watch": "webpack --progress --colors --watch"
+    "build": "npm run build:scss && npm run build:ts",
+    "build:scss": "node-sass ./style/src --output ../server/public/style/dist",
+    "build:ts": "webpack --progress --colors --config webpack.config.dev.js",
+    "watch": "npm run watch:scss & npm run watch:ts",
+    "watch:scss": "node-sass ./style/src --output ../server/public/style/dist --watch",
+    "watch:ts": "webpack --progress --colors --watch --config webpack.config.dev.js",
   },
   "licenses": [
     {
@@ -615,17 +607,21 @@ module.exports = {
     "@angular/platform-browser-dynamic": "~2.1.0",
     "@angular/router": "~3.1.0",
     "@angular/upgrade": "~2.1.0",
-    "@types/core-js": "^0.9.34",
-    "@types/reflect-metadata": "0.0.5",
-    "@types/rx": "^2.5.33",
-    "@types/zone.js": "0.0.27",
     "angular-in-memory-web-api": "~0.1.5",
-    "core-js": "^2.4.1",
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.2",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
+    "@types/bootstrap": "^3.3.32",
+    "@types/jquery": "^2.0.39",
+    "@types/lodash": "^4.14.40",
+    "@types/reflect-metadata": "0.0.5",
+    "@types/rx": "^2.5.33",
+    "@types/zone.js": "0.0.27",
+    "node-sass": "^4.1.1",
     "ts-loader": "^0.9.1",
     "typescript": "^2.0.3",
     "webpack": "^1.13.2"

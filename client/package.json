@@ -2,16 +2,10 @@
   "name": "sample-crud-application-client",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run build:scss && npm run build:ts",
-    "build:scss": "node-sass ./style/src --output ../server/public/style/dist",
-    "build:ts": "webpack --progress --colors --config webpack.config.dev.js",
-    "watch": "npm run watch:scss & npm run watch:ts",
-    "watch:scss": "node-sass ./style/src --output ../server/public/style/dist --watch",
-    "watch:ts": "webpack --progress --colors --watch --config webpack.config.dev.js",
-    "build-product": "npm run build:scss && npm run build-product:ts",
-    "build-product:ts": "webpack --progress --colors --config webpack.config.prod.js",
-    "watch-product": "npm run watch:scss & npm run watch-product:ts",
-    "watch-product:ts": "webpack --progress --colors --watch --config webpack.config.prod.js"
+    "build": "webpack --progress --colors --config webpack.config.dev.js",
+    "watch": "webpack --progress --colors --watch --config webpack.config.dev.js",
+    "build-product": "webpack --progress --colors --config webpack.config.prod.js",
+    "watch-product": "webpack --progress --colors --watch --config webpack.config.prod.js"
   },
   "licenses": [
     {
