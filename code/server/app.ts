@@ -2,6 +2,7 @@ import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as http from 'http';
 import * as path from 'path';
+import * as favicon from 'serve-favicon';
 import api from './routes/api';
 import index from './routes/index';
 
@@ -11,6 +12,7 @@ import index from './routes/index';
  * @type {Express}
  */
 const app = express();
+app.use(favicon(__dirname + '/public/favicon.png'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
