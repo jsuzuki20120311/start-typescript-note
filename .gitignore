@@ -7,6 +7,7 @@ node_modules
 *.js
 *.iml
 
-!webpack.config.js
+!webpack.config.dev.js
+!webpack.config.prod.js
 
 db_config.json
