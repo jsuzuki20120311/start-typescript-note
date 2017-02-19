@@ -3,7 +3,7 @@ import { ArticleController } from '../../../controller/ArticleController';
 
 const article = express.Router();
 
-article.get('/sample-crud-article/api/v1/article/', (req, res) => {
+article.get('/', (req, res) => {
     const articleController = new ArticleController();
     articleController.index(req, res);
 });
