@@ -1,4 +1,5 @@
 import * as bodyParser from 'body-parser';
+import * as ejs from 'ejs';
 import * as express from 'express';
 import * as http from 'http';
 import * as path from 'path';
@@ -12,15 +13,43 @@ import index from './routes/index';
  * @type {Express}
  */
 const app = express();
+
+// ファビコンを設定
 app.use(favicon(__dirname + '/public/favicon.png'));
+
+// テンプレートエンジンに ejs を使用するための設定
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// 静的ファイルのルーティング
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/', index);
 app.use('/api', api);
-app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+
+// ４０４のルーティング
+app.use((req, res, next) => {
+  const err = {
+    status: 404,
+    message: 'Not Found'
+  };
+  next(err);
 });
+
+// エラーハンドラー
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  err.status = err.status || 500;
+  res.status(err.status);
+  if (req.xhr) {
+    res.send(err);
+  } else {
+    res.render('error', err);
+  }
+});
+
 
 const server = http.createServer(app);
 const port = normalizePort(process.env.PORT || '3000');
