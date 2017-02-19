@@ -3,8 +3,14 @@ import { AbstractDao } from './AbstractDao';
 import { Article } from '../model/Article';
 import { RegisteredArticle } from '../model/RegisteredArticle';
 
+/**
+ * 記事データ用Daoクラス
+ */
 export class ArticleDao extends AbstractDao {
 
+  /**
+   * コンストラクタ
+   */
   constructor() {
     super();
   }
@@ -16,21 +22,18 @@ export class ArticleDao extends AbstractDao {
       article.body
     ];
     return new Promise<any>((resolve, reject) => {
-      const connection = this.createConnection();
-      connection.query(query, param, (error, results) => {
+      this.connection.query(query, param, (error, results) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(results);
+          return;
         }
-        connection.destroy();
+        resolve(results);
       });
     });
   }
 
   findAllArticles(): Promise<RegisteredArticle[]> {
     return new Promise<Article[]>((resolve, reject) => {
-      const connection = this.createConnection();
       const query = ' select' +
         ' id' +
         ' ,title' +
@@ -39,58 +42,53 @@ export class ArticleDao extends AbstractDao {
         ' ,DATE_FORMAT(updated_at, \'%Y-%m-%d %k:%i:%s\') as updatedAt' +
         ' from article' +
         ' order by id';
-      connection.query(query, [], (error, results) => {
+      this.connection.query(query, [], (error, results) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(results);
+          return;
         }
-        connection.destroy();
+        resolve(results);
       });
     });
   }
 
   findCount(): Promise<{ count: number }> {
     return new Promise<{ count: number }>((resolve, reject) => {
-      const connection = this.createConnection();
       const query = 'select count(id) as count from article';
-      connection.query(query, [], (error, results) => {
+      this.connection.query(query, [], (error, results) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(results[0]);
+          return;
         }
-        connection.destroy();
+        resolve(results[0]);
       });
     });
   }
 
   findArticles(offset: number = 0, limit: number = 0): Promise<RegisteredArticle[]> {
-    const query = ' select' +
-        ' id' +
-        ' ,title' +
-        ' ,body' +
-        ' ,DATE_FORMAT(created_at, \'%Y-%m-%d %k:%i:%s\') as createdAt' +
-        ' ,DATE_FORMAT(updated_at, \'%Y-%m-%d %k:%i:%s\') as updatedAt' +
-      ' from article' +
-      ' order by id' +
-      ' limit ?, ?';
     return new Promise<Article[]>((resolve, reject) => {
-      const connection = this.createConnection();
-      connection.query(query, [offset, limit], (error, results) => {
+      const query = 'select' +
+          ' id' +
+          ' ,title' +
+          ' ,body' +
+          ' ,DATE_FORMAT(created_at, \'%Y-%m-%d %k:%i:%s\') as createdAt' +
+          ' ,DATE_FORMAT(updated_at, \'%Y-%m-%d %k:%i:%s\') as updatedAt' +
+        ' from article' +
+        ' order by id' +
+        ' limit ?, ?';
+      this.connection.query(query, [offset, limit], (error, results) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(results);
+          return;
         }
-        connection.destroy();
+        resolve(results);
       });
     });
   }
 
   findArticleById(id: number): Promise<RegisteredArticle> {
     return new Promise<Article>((resolve, reject) => {
-      const query = ' select' +
+      const query = 'select ' +
         ' id' +
         ' ,title' +
         ' ,body' +
@@ -98,114 +96,66 @@ export class ArticleDao extends AbstractDao {
         ' ,DATE_FORMAT(updated_at, \'%Y-%m-%d %k:%i:%s\') as updatedAt' +
         ' from article' +
         ' where id = ?';
-      const connection = this.createConnection();
-      connection.query(query, [id], (error, results) => {
+      this.connection.query(query, [id], (error, results) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(results);
+          return;
         }
-        connection.destroy();
+        resolve(results);
       });
     });
   }
 
   updateArticle(id: number, article: Article): Promise<void>{
-    const connection = this.createConnection();
-
-    const updatePromise = new Promise<any>((resolve, reject) => {
+    return new Promise<any>((resolve, reject) => {
       const query = 'update article ' +
         'set title = ? ' +
           ', body = ? ' +
           ', updated_at = now() ' +
-        'where id = ? ';
-
+        'where id = ?';
       const params = [
         article.title,
         article.body,
         id
       ];
-
-      connection.query(query, params, (error, results) => {
+      this.connection.query(query, params, (error, results) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(results);
+          return;
         }
-      });
-    });
-
-    return new Promise<void>((resolve, reject) => {
-      this.startTransaction(connection)
-      .then(() => {
-        return this.lock(id, connection);
-      })
-      .then(() => {
-        return updatePromise;
-      })
-      .then(() => {
-        return this.commit(connection);
-      })
-      .then(() => {
-        connection.destroy();
-        resolve();
-      })
-      .catch((error) => {
-        connection.rollback(() => {
-          connection.destroy();
-        });
-        reject(error);
+        resolve(results);
       });
     });
   }
 
   deleteArticle(id: number): Promise<void> {
-    const connection = this.createConnection();
-
-    const deletePromise = new Promise<void>((resolve, reject) => {
-      const query = 'DELETE FROM article WHERE ID = ? ';
-      connection.query(query, [id], (error, result) => {
+    return new Promise<void>((resolve, reject) => {
+      const query = 'DELETE FROM article WHERE ID = ?';
+      this.connection.query(query, [id], (error, result) => {
         if (error) {
           reject(error);
-        } else {
-          resolve(result);
+          return;
         }
-      });
-    });
-
-    return new Promise<void>((resolve, reject) => {
-      this.startTransaction(connection)
-      .then(() => {
-        return this.lock(id, connection);
-      })
-      .then(() => {
-        return deletePromise;
-      })
-      .then(() => {
-        return this.commit(connection);
-      })
-      .then(() => {
-        connection.destroy();
-        resolve();
-      })
-      .catch((error) => {
-        connection.rollback(() => {
-          connection.destroy();
-        });
-        reject(error);
+        resolve(result);
       });
     });
   }
 
-  private lock(id: number, connection: mysql.IConnection): Promise<void> {
-    return new Promise<void>((resolve, reject) => {
-      const query = 'select * from article where id = ? for update';
-      connection.query(query, [id], (error) => {
+  lock(id: number): Promise<RegisteredArticle> {
+    return new Promise<RegisteredArticle>((resolve, reject) => {
+      const query = 'select ' +
+        ' id ' +
+        ' ,title' +
+        ' ,body' +
+        ' ,DATE_FORMAT(created_at, \'%Y-%m-%d %k:%i:%s\') as createdAt' +
+        ' ,DATE_FORMAT(updated_at, \'%Y-%m-%d %k:%i:%s\') as updatedAt' +
+        ' from article where id = ? for update';
+      this.connection.query(query, [id], (error, results) => {
         if (error) {
           reject(error);
-        } else {
-          resolve();
+          return;
         }
+        resolve(results);
       });
     });
   }

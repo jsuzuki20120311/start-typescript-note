@@ -1,40 +1,64 @@
 import * as mysql from 'mysql';
 import { DbConfigManager } from '../config/DbConfigManager';
 
+
+/**
+ * Daoの基底クラス
+ */
 export abstract class AbstractDao {
 
-  protected createConnection(): mysql.IConnection {
-    const connection = mysql.createConnection(DbConfigManager.getConfig());
-    connection.connect((error) => {
-      if (error) {
-        console.error(error);
-      }
-    });
-    return connection;
+  protected connection: mysql.IConnection;
+
+  constructor() {
+    this.connection = mysql.createConnection(DbConfigManager.getConfig());
   }
 
-  protected startTransaction(connection: mysql.IConnection): Promise<void> {
+  connect(): Promise<void> {
     return new Promise<void>((resolve, reject) => {
-      connection.beginTransaction((error) => {
+      this.connection.connect((error) => {
         if (error) {
           reject(error);
-        } else {
-          resolve();
+          return
         }
+        resolve();
+      });    
+    });
+  }
+
+  beginTransaction(): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      this.connection.beginTransaction((error) => {
+        if (error) {
+          reject(error);
+          return;
+        }
+        resolve();
       });
     });
   }
 
-  protected commit(connection: mysql.IConnection): Promise<void> {
+  commit(): Promise<void> {
     return new Promise<void>((resolve, reject) => {
-      connection.commit((error) => {
+      this.connection.commit((error) => {
         if (error) {
           reject(error);
-        } else {
-          resolve();
+          return;
         }
+        resolve();
       });
     });
+  }
+
+  rollback(): Promise<void> {
+    return new Promise<void>((resolve) => {
+      this.connection.rollback(() => {
+        resolve();
+      });
+    });
+  }
+
+  destroyConnection(): void {
+    this.connection.destroy();
   }
 
 }
