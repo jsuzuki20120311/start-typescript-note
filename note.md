@@ -609,7 +609,6 @@ module.exports = {
     "@angular/upgrade": "~2.1.0",
     "angular-in-memory-web-api": "~0.1.5",
     "bootstrap": "^3.3.7",
-    "lodash": "^4.17.2",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.25"
@@ -617,7 +616,6 @@ module.exports = {
   "devDependencies": {
     "@types/bootstrap": "^3.3.32",
     "@types/jquery": "^2.0.39",
-    "@types/lodash": "^4.14.40",
     "@types/reflect-metadata": "0.0.5",
     "@types/rx": "^2.5.33",
     "@types/zone.js": "0.0.27",
