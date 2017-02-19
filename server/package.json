@@ -1,10 +1,10 @@
 {
   "name": "sample-crud-application-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./www/index.js",
   "scripts": {
-    "start": "node ./app.js",
-    "dev": "tsc --watch & node-dev ./app.js",
+    "start": "node ./www/index.js",
+    "dev": "tsc --watch & node-dev ./www/index.js",
     "build": "tsc",
     "watch": "tsc --watch"
   },

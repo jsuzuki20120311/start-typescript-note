@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "プログラムの起動",
-            "program": "${workspaceRoot}/server/app.js",
+            "program": "${workspaceRoot}/server/www/index.js",
             "cwd": "${workspaceRoot}/server",
             "outFiles": []
         },
