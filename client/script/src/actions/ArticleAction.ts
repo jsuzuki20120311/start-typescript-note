@@ -1,7 +1,7 @@
 'use strict';
 
 import { AppStore } from '../common/AppStore';
-import { RegisteredArticle } from '../model/RegisteredArticle';
+import { RegisteredArticle } from '../models/RegisteredArticle';
 
 export class ArticleAction {
 

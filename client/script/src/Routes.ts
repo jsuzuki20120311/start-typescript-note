@@ -1,6 +1,6 @@
-import { ArticleListComponent } from './component/article-list.component';
-import { ArticleEditorComponent } from './component/article-editor.component';
-import { UpdateArticlePageComponent } from './component/update-article-page.component';
+import { ArticleListComponent } from './components/article-list.component';
+import { ArticleEditorComponent } from './components/article-editor.component';
+import { UpdateArticlePageComponent } from './components/update-article-page.component';
 
 export class Routes {
 

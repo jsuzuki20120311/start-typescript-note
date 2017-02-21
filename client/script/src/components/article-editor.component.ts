@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ProcessingModalAction } from '../action/ProcessingModalAction';
-import { AppState } from '../model/AppState';
-import { Article } from '../model/Article';
+import { ProcessingModalAction } from '../actions/ProcessingModalAction';
+import { AppState } from '../models/AppState';
+import { Article } from '../models/Article';
 import { AppStore } from '../common/AppStore';
-import { ArticleService } from "../service/ArticleService";
+import { ArticleService } from "../services/ArticleService";
 
 @Component({
     selector: 'article-editor',

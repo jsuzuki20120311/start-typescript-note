@@ -1,6 +1,6 @@
 'use strict';
 
-import { AppState } from '../model/AppState';
+import { AppState } from '../models/AppState';
 
 
 interface Handler {

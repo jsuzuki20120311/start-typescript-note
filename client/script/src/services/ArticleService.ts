@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 import { Config } from '../Config';
-import { Article } from "../model/Article";
+import { Article } from "../models/Article";
 
 @Injectable()
 export class ArticleService {

@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 module.exports = {
   entry: {
-    bundle: './script/src/productMain.ts',
+    bundle: './script/src/product-main.ts',
     vendor: './script/src/vendor.ts'
   },
   externals: {

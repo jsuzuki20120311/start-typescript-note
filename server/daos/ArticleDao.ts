@@ -1,6 +1,6 @@
 import * as mysql from 'mysql';
-import { Article } from '../model/Article';
-import { RegisteredArticle } from '../model/RegisteredArticle';
+import { Article } from '../models/Article';
+import { RegisteredArticle } from '../models/RegisteredArticle';
 
 /**
  * 記事データ用Daoクラス

@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { AppStore } from '../common/AppStore';
-import { ArticleService } from "../service/ArticleService";
-import { AppState } from "../model/AppState";
-import { RegisteredArticle } from "../model/RegisteredArticle";
-import { ArticleAction } from '../action/ArticleAction';
-import { ProcessingModalAction } from '../action/ProcessingModalAction';
+import { ArticleService } from "../services/ArticleService";
+import { AppState } from "../models/AppState";
+import { RegisteredArticle } from "../models/RegisteredArticle";
+import { ArticleAction } from '../actions/ArticleAction';
+import { ProcessingModalAction } from '../actions/ProcessingModalAction';
 
 @Component({
     selector: 'article-list',
