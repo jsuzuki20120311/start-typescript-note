@@ -1,14 +1,11 @@
-
 import * as http from 'http';
 import app from '../app';
-
 
 const server = http.createServer(app);
 const port = normalizePort(process.env.PORT || '3000');
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-
 
 /**
  * Normalize a port into a number, string, or false.
@@ -28,7 +25,6 @@ function normalizePort(val: string) {
 
   return false;
 }
-
 
 /**
  * Event listener for HTTP server "error" event.

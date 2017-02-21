@@ -7,7 +7,7 @@ export class DbConfigManager {
 
   public static getConfig(): DbConfig {
     if (!DbConfigManager.dbConfig) {
-      let data = fs.readFileSync('./json/db_config.json', 'utf-8');
+      const data = fs.readFileSync('./json/db_config.json', 'utf-8');
       DbConfigManager.dbConfig = JSON.parse(data);
     }
     return DbConfigManager.dbConfig;

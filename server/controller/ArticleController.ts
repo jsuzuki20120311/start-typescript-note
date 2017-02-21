@@ -1,4 +1,6 @@
 import * as express from 'express';
+import * as mysql from 'mysql';
+import { DbConfigManager } from '../config/DbConfigManager';
 import { ArticleDao } from '../dao/ArticleDao';
 
 /**
@@ -6,98 +8,92 @@ import { ArticleDao } from '../dao/ArticleDao';
  */
 export class ArticleController {
 
-  private articleDao: ArticleDao;
-
-  /**
-   * コンストラクタ
-   */
-  constructor() {
-    this.articleDao = new ArticleDao();
-  }
-
   all(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    this.articleDao.connect()
+    const connection = mysql.createConnection(DbConfigManager.getConfig());
+    connection.connect();
+    const articleDao = new ArticleDao(connection);
+    articleDao.findAllArticles()
     .then(() => {
-      return this.articleDao.findAllArticles();
+      return articleDao.findAllArticles();
     })
     .then((results) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       res.send({ data: results });
     })
     .catch(() => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       next({ status: 500 });
     });
   }
 
   index(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    this.articleDao.connect()
-    .then(() => {
-      const offset = parseInt(req.query.offset, 10);
-      const limit = parseInt(req.query.limit, 10);
-      return this.articleDao.findArticles(offset, limit);
-    })
+    const connection = mysql.createConnection(DbConfigManager.getConfig());
+    connection.connect();
+    const articleDao = new ArticleDao(connection);
+    const offset = parseInt(req.query.offset, 10);
+    const limit = parseInt(req.query.limit, 10);
+    articleDao.findArticles(offset, limit)
     .then((results) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       res.send({ data: results });
     })
     .catch(() => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       next({ status: 500 });
     });
   }
 
   count(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    this.articleDao.connect()
-    .then(() => {
-      return this.articleDao.findCount();
-    })
+    const connection = mysql.createConnection(DbConfigManager.getConfig());
+    connection.connect();
+    const articleDao = new ArticleDao(connection);
+    articleDao.findCount()
     .then((count) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       res.send({ data: count });
     })
     .catch(() => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       next({ status: 500 });
     });
   }
 
   create(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    this.articleDao.connect()
-    .then(() => {
-      this.articleDao.createArticle(req.body);
-    })
+    const connection = mysql.createConnection(DbConfigManager.getConfig());
+    const articleDao = new ArticleDao(connection);
+    connection.connect();
+    articleDao.createArticle(req.body)
     .then((results) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       res.send({ data: results });
     })
     .catch(() => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       next({ status: 500 });
     });
   }
 
   read(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    this.articleDao.connect()
-    .then(() => {
-      return this.articleDao.findArticleById(parseInt(req.params.id, 10));
-    })
+    const connection = mysql.createConnection(DbConfigManager.getConfig());
+    connection.connect();
+    const articleDao = new ArticleDao(connection);
+    articleDao.findArticleById(parseInt(req.params.id, 10))
     .then((results) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       res.send({ data: results });
     })
     .catch(() => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       next({ status: 500 });
     });
   }
 
   update(req: express.Request, res: express.Response, next: express.NextFunction): void {
+    const connection = mysql.createConnection(DbConfigManager.getConfig());
+    connection.connect();
     const articleId = parseInt(req.params.id, 10);
-    this.articleDao.connect()
-    .then(() => {
-      return this.articleDao.lock(articleId);
-    })
+    const articleDao = new ArticleDao(connection);
+    articleDao.lock(articleId)
     .then((results) => {
       if (!Array.isArray(results) || results.length === 0) {
         return Promise.reject({status: 404}); 
@@ -105,37 +101,37 @@ export class ArticleController {
       if (results[0].updatedAt !== req.body.updatedAt) {
         return Promise.reject({status: 409});
       }
-      return this.articleDao.updateArticle(articleId, req.body);
+      return articleDao.updateArticle(articleId, req.body);
     })
     .then((results) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       res.send({ data: results });
     })
     .catch((error) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       error.status = error.status || 500;
       next(error);
     });
   }
 
   delete(req: express.Request, res: express.Response, next: express.NextFunction): void {
+    const connection = mysql.createConnection(DbConfigManager.getConfig());
+    connection.connect();
+    const articleDao = new ArticleDao(connection);
     const articleId = parseInt(req.params.id, 10);
-    this.articleDao.connect()
-    .then(() => {
-      return this.articleDao.lock(articleId);
-    })
+    articleDao.lock(articleId)
     .then((results) => {
       if (!Array.isArray(results) || results.length === 0) {
         return Promise.reject({status: 404});
       }
-      return this.articleDao.deleteArticle(articleId);
+      return articleDao.deleteArticle(articleId);
     })
     .then((results) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();
       res.send({ data: results });
     })
     .catch((error) => {
-      this.articleDao.destroyConnection();
+      connection.destroy();;
       error.status = error.status || 500;
       next({ status: 500 });
     });

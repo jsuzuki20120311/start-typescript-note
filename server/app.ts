@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/api', api);
 
-// ４０４のルーティング
+// 404のルーティング
 app.use((req, res, next) => {
   const err = {
     status: 404,

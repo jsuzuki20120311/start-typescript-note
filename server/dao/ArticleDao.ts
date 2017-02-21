@@ -1,20 +1,29 @@
 import * as mysql from 'mysql';
-import { AbstractDao } from './AbstractDao';
 import { Article } from '../model/Article';
 import { RegisteredArticle } from '../model/RegisteredArticle';
 
 /**
  * 記事データ用Daoクラス
  */
-export class ArticleDao extends AbstractDao {
+export class ArticleDao {
+
+  /**
+   * データベースコネクション
+   */
+  private connection: mysql.IConnection;
 
   /**
    * コンストラクタ
+   * @param {mysql.IConnection} connection データベースコネクション
    */
-  constructor() {
-    super();
+  constructor(connection: mysql.IConnection) {
+    this.connection = connection;
   }
 
+  /**
+   * 新しく記事データをDBに作成します。
+   * @param {Article} article
+   */
   createArticle(article: Article): Promise<any> {
     const query = 'insert into article (title, body, created_at, updated_at) values (?, ?, now(), now())';
     const param = [
@@ -106,7 +115,7 @@ export class ArticleDao extends AbstractDao {
     });
   }
 
-  updateArticle(id: number, article: Article): Promise<void>{
+  updateArticle(id: number, article: Article): Promise<void> {
     return new Promise<any>((resolve, reject) => {
       const query = 'update article ' +
         'set title = ? ' +
