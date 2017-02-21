@@ -1,5 +1,8 @@
 import * as http from 'http';
 import app from '../app';
+import { DbConfigManager } from '../config/DbConfigManager';
+
+DbConfigManager.initialize();
 
 const server = http.createServer(app);
 const port = normalizePort(process.env.PORT || '3000');
