@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as mysql from 'mysql';
+import { ArticleService } from '../services/ArticleService';
 import { DbConfigManager } from '../config/DbConfigManager';
 import { ArticleDao } from '../dao/ArticleDao';
 
@@ -8,39 +9,25 @@ import { ArticleDao } from '../dao/ArticleDao';
  */
 export class ArticleController {
 
+  private articleService: ArticleService;
+
+  constructor() {
+    this.articleService = new ArticleService();
+  }
+
   all(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    const connection = mysql.createConnection(DbConfigManager.getConfig());
-    connection.connect();
-    const articleDao = new ArticleDao(connection);
-    articleDao.findAllArticles()
-    .then(() => {
-      return articleDao.findAllArticles();
-    })
-    .then((results) => {
-      connection.destroy();;
-      res.send({ data: results });
-    })
-    .catch(() => {
-      connection.destroy();;
-      next({ status: 500 });
-    });
+    this.articleService.getAllArticles()
+      .then((articles) => {
+        res.send({data: articles});
+      })
+      .catch((error) => {
+        error.status = error.status || 500;
+        next(error);
+      });
   }
 
   index(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    const connection = mysql.createConnection(DbConfigManager.getConfig());
-    connection.connect();
-    const articleDao = new ArticleDao(connection);
-    const offset = parseInt(req.query.offset, 10);
-    const limit = parseInt(req.query.limit, 10);
-    articleDao.findArticles(offset, limit)
-    .then((results) => {
-      connection.destroy();;
-      res.send({ data: results });
-    })
-    .catch(() => {
-      connection.destroy();;
-      next({ status: 500 });
-    });
+
   }
 
   count(req: express.Request, res: express.Response, next: express.NextFunction): void {
