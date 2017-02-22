@@ -1,8 +1,8 @@
 var webpack = require('webpack');
 module.exports = {
   entry: {
-    bundle: './script/src/product-main.ts',
-    vendor: './script/src/vendor.ts'
+    app: './src/product-app.ts',
+    vendor: './src/vendor.ts'
   },
   externals: {
     "jquery": "jQuery"
@@ -16,7 +16,7 @@ module.exports = {
     ]
   },
   output: {
-    path: '../server/public/script/dist/',
+    path: '../server/public/dist/',
     filename: '[name].js'
   },
   plugins: [

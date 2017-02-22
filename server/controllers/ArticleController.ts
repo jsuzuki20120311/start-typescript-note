@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as mysql from 'mysql';
 import { DbConfigManager } from '../config/DbConfigManager';
-import { ArticleDao } from '../daos/ArticleDao';
+import { ArticleDao } from '../dao/ArticleDao';
 
 /**
  * 記事API用コントローラ

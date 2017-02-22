@@ -1,16 +1,17 @@
+import * as mysql from 'mysql';
 import * as fs from 'fs';
-import { DbConfig } from './DbConfig';
+
 
 export class DbConfigManager {
 
-  private static dbConfig: DbConfig;
+  private static dbConfig: mysql.IConnectionConfig;
 
-  public static initialize(): void {
+  static initialize(): void {
     const data = fs.readFileSync('./json/db_config.json', 'utf-8');
     DbConfigManager.dbConfig = JSON.parse(data);
   }
 
-  public static getConfig(): DbConfig {
+  static getConfig(): mysql.IConnectionConfig {
     if (!DbConfigManager.dbConfig) {
       throw new Error('Did not initialized!');
     }

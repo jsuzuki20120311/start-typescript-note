@@ -2,8 +2,8 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry: {
-    bundle: './script/src/main.ts',
-    vendor: './script/src/vendor.ts'
+    app: './src/app.ts',
+    vendor: './src/vendor.ts'
   },
   externals: {
     "jquery": "jQuery"
@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   output: {
-    path: '../server/public/script/dist/',
+    path: '../server/public/dist/',
     filename: '[name].js'
   },
   plugins: [
