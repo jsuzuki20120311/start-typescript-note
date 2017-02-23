@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, RequestOptions, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/toPromise';
+import * as Rx from 'rxjs';
 import { Config } from '../Config';
 import { Article } from "../models/Article";
 
@@ -15,28 +12,28 @@ export class ArticleService {
   constructor(private http: Http) {
   }
 
-  findArticles(offset: number, limit: number): Observable<any> {
+  findArticles(offset: number, limit: number): Rx.Observable<any> {
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}?offset=${offset}&limit=${limit}`;
     return this.http.get(encodeURI(url))
       .map(this.extractData)
       .catch(this.handleError);
   }
 
-  findArticleById(id: number): Observable<any> {
+  findArticleById(id: number): Rx.Observable<any> {
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
     return this.http.get(encodeURI(url))
       .map(this.extractData)
       .catch(this.handleError);
   }
 
-  findAllArticles(): Observable<any> {
+  findAllArticles(): Rx.Observable<any> {
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/all`;
     return this.http.get(encodeURI(url))
       .map(this.extractData)
       .catch(this.handleError);
   }
 
-  create(article: Article): Observable<any> {
+  create(article: Article): Rx.Observable<any> {
     const sendData = JSON.stringify(article);
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const requestOptions = new RequestOptions({ headers: headers });
@@ -45,7 +42,7 @@ export class ArticleService {
       .catch(this.handleError);
   }
 
-  update(id: number, article: Article): Observable<any> {
+  update(id: number, article: Article): Rx.Observable<any> {
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
     const sendData = JSON.stringify(article);
     const headers = new Headers({ 'Content-Type': 'application/json' });
@@ -55,7 +52,7 @@ export class ArticleService {
       .catch(this.handleError);
   }
 
-  delete(id: number): Observable<any> {
+  delete(id: number): Rx.Observable<any> {
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
     return this.http.delete(encodeURI(url))
       .map(this.extractData)
@@ -71,7 +68,7 @@ export class ArticleService {
 
   private handleError (error: any): any {
     const errMsg = error.message || 'Server error';
-    return Observable.throw(errMsg);
+    return Rx.Observable.throw(errMsg);
   }
 
 }

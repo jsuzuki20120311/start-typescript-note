@@ -1,8 +1,9 @@
 var webpack = require('webpack');
+
 module.exports = {
   entry: {
-    app: './src/product-app.ts',
-    vendor: './src/vendor.ts'
+    app: './app/product-app.ts',
+    vendor: './app/vendor.ts'
   },
   externals: {
     "jquery": "jQuery"
@@ -16,12 +17,12 @@ module.exports = {
     ]
   },
   output: {
-    path: '../server/public/dist/',
+    path: '../server/public/app/',
     filename: '[name].js'
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['bundle', 'vendor']
+      name: ['app', 'vendor']
     })
   ],
   resolve: {

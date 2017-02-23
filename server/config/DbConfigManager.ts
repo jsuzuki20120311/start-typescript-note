@@ -1,7 +1,6 @@
 import * as mysql from 'mysql';
 import * as fs from 'fs';
 
-
 export class DbConfigManager {
 
   private static dbConfig: mysql.IConnectionConfig;

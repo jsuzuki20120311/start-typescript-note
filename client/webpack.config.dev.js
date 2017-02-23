@@ -1,9 +1,11 @@
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
+
 module.exports = {
   devtool: 'source-map',
   entry: {
-    app: './src/app.ts',
-    vendor: './src/vendor.ts'
+    app: './app/app.ts',
+    vendor: './app/vendor.ts'
   },
   externals: {
     "jquery": "jQuery"
@@ -17,12 +19,25 @@ module.exports = {
     ]
   },
   output: {
-    path: '../server/public/dist/',
+    path: '../server/public/app/',
     filename: '[name].js'
   },
   plugins: [
+    new CopyWebpackPlugin([
+        { 
+          from: './app/**/*.html',
+          to: '../'
+        }
+      ],
+      {
+        ignore: [
+          '.DS_Store',
+          '.gitkeep'
+        ]
+      }
+    ),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['bundle', 'vendor']
+      name: ['app', 'vendor']
     })
   ],
   resolve: {

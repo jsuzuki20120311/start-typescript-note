@@ -8,11 +8,7 @@
     "build": "tsc",
     "watch": "tsc --watch"
   },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
     "ejs": "^2.5.6",

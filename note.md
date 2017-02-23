@@ -546,7 +546,7 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry: {
-    bundle: './script/src/main.ts',
+    bundle: './script/src/app.ts',
     vendor: './script/src/vendor.ts'
   },
   externals: {
