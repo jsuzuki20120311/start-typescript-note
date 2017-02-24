@@ -27,7 +27,6 @@
   "devDependencies": {
     "@types/bootstrap": "^3.3.32",
     "@types/jquery": "^2.0.39",
-    "@types/lodash": "^4.14.40",
     "@types/reflect-metadata": "0.0.5",
     "@types/rx": "^2.5.33",
     "@types/zone.js": "0.0.27",
