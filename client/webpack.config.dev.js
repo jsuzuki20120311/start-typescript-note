@@ -20,7 +20,7 @@ module.exports = {
   },
   output: {
     path: '../server/public/',
-    filename: '[name].js'
+    filename: 'app/[name].js'
   },
   plugins: [
     new CopyWebpackPlugin([
