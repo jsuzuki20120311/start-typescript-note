@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   output: {
-    path: '../server/public/app/',
+    path: '../server/public/',
     filename: '[name].js'
   },
   plugins: [

@@ -19,21 +19,26 @@ module.exports = {
     ]
   },
   output: {
-    path: '../server/public/app/',
+    path: '../server/public/',
     filename: '[name].js'
   },
   plugins: [
     new CopyWebpackPlugin([
-        { 
+        {
+          from: './index.html',
+          to: './'
+        },
+        {
           from: './app/**/*.html',
-          to: '../'
+          to: './'
+        },
+        {
+          from: './app/**/*.css',
+          to: './'
         }
       ],
       {
-        ignore: [
-          '.DS_Store',
-          '.gitkeep'
-        ]
+        ignore: [ '.DS_Store', '.gitkeep' ]
       }
     ),
     new webpack.optimize.CommonsChunkPlugin({
