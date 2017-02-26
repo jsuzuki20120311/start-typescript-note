@@ -48,11 +48,11 @@ import { ArticleService } from "../services/ArticleService";
 })
 export class ArticleEditorComponent implements OnInit, OnDestroy {
 
-    private article: Article;
+    article: Article;
 
-    private isProcessing: boolean;
+    isProcessing: boolean;
 
-    private isCompleted: boolean;
+    isCompleted: boolean;
 
     constructor(
         private articleService: ArticleService
@@ -74,15 +74,15 @@ export class ArticleEditorComponent implements OnInit, OnDestroy {
         AppStore.getInstance().removeHandler('CHANGE', this.onChangeAppState);
     }
 
-    private titleChanged(event: Event): void {
+    titleChanged(event: Event): void {
         this.article.title = (event.target as HTMLInputElement).value;
     }
 
-    private bodyChanged(event: Event): void {
+    bodyChanged(event: Event): void {
         this.article.body = (event.target as HTMLInputElement).value;
     }
 
-    private registerButtonClicked(): void {
+    registerButtonClicked(): void {
         ProcessingModalAction.setProcessingFlag(true);
         this.articleService.create(this.article).subscribe(() => {
             ProcessingModalAction.setProcessingFlag(false);

@@ -6,8 +6,8 @@ import { AppState } from '../models/AppState';
 
 @Component({
   selector: 'app',
-  templateUrl: '/app/components/app.component.html',
-  styleUrls: ['/app/components/app.component.css']
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
 

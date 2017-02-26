@@ -1,6 +1,8 @@
+import 'core-js/shim';
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 
+// Angular
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
 import '@angular/core';

@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { Routes } from './Routes';
+
 import { AppComponent } from './components/app.component';
 import { ArticleListComponent } from './components/article-list.component';
 import { ArticleEditorComponent } from './components/article-editor.component';
@@ -25,9 +26,5 @@ import { UpdateArticlePageComponent } from './components/update-article-page.com
   ]
 })
 export class AppModule {
-
-  constructor() {
-
-  }
 
 }

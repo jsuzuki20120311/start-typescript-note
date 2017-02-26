@@ -20,21 +20,24 @@ module.exports = {
   },
   output: {
     path: '../server/public/',
-    filename: 'app/[name].js'
+    filename: '[name].js'
   },
   plugins: [
     new CopyWebpackPlugin([
         {
           from: './index.html',
-          to: './'
+          to: './',
+          flatten: true
         },
         {
           from: './app/**/*.html',
-          to: './'
+          to: './',
+          flatten: true
         },
         {
           from: './app/**/*.css',
-          to: './'
+          to: './',
+          flatten: true
         }
       ],
       {
@@ -46,6 +49,6 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['.ts', '.js', '.html', '.css']
   }
 };

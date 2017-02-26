@@ -9,41 +9,17 @@ import { ProcessingModalAction } from '../actions/ProcessingModalAction';
 @Component({
     selector: 'article-list',
     providers: [ ArticleService ],
-    template: `
-    <h2>記事</h2>
-    <table class="table" *ngIf="articles">
-      <tr>
-        <th>id</th>
-        <th>タイトル</th>
-        <th>作成日時</th>
-        <th>更新日時</th>
-        <th>操作</th>
-      </tr>
-      <tr *ngFor="let article of articles">
-        <td>{{ article.id }}</td>
-        <td>{{ article.title }}</td>
-        <td>{{ article.createdAt }}</td>
-        <td>{{ article.updatedAt }}</td>
-        <td>
-          <a [routerLink]="['/update-article', article.id]">
-            <button class="btn btn-primary"> 
-              編集
-            </button>
-          </a>
-        </td>
-      </tr>
-    </table>
-  `
+    templateUrl: 'article-list.component.html'
 })
 export class ArticleListComponent implements OnInit, OnDestroy {
 
     private htmlElement: HTMLElement;
 
-    private articles: RegisteredArticle[];
+    articles: RegisteredArticle[];
 
-    private isProcessing: boolean;
+    isProcessing: boolean;
 
-    private selectedArticle: RegisteredArticle;
+    selectedArticle: RegisteredArticle;
 
     constructor(
         private elementRef: ElementRef,
@@ -75,11 +51,11 @@ export class ArticleListComponent implements OnInit, OnDestroy {
         this.isProcessing = currentAppState.isProcessing;
     }
 
-    private titleChanged(event: Event): void {
+    titleChanged(event: Event): void {
         this.selectedArticle.title = (event.target as HTMLInputElement).value;
     }
 
-    private bodyChanged(event: Event): void {
+    bodyChanged(event: Event): void {
         this.selectedArticle.body = (event.target as HTMLInputElement).value;
     }
 

@@ -15,6 +15,10 @@
         {
             "taskName": "watch",
             "args": ["npm -prefix ./client run watch & npm -prefix ./server run dev;"]
+        },
+        {
+            "taskName": "build-product",
+            "args": ["npm -prefix ./client run build-product && npm -prefix ./server run build;"]
         }
     ]
 }
