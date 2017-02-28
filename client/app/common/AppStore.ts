@@ -1,5 +1,3 @@
-'use strict';
-
 import { AppState } from '../models/AppState';
 
 
@@ -14,6 +12,11 @@ interface EmitInfo {
 }
 
 
+/**
+ * アプリケーションの状態を保持します。
+ * @export
+ * @class AppStore
+ */
 export class AppStore {
 
   private static instance: AppStore;

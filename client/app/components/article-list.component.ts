@@ -7,56 +7,56 @@ import { ArticleAction } from '../actions/ArticleAction';
 import { ProcessingModalAction } from '../actions/ProcessingModalAction';
 
 @Component({
-    selector: 'article-list',
-    providers: [ ArticleService ],
-    templateUrl: 'article-list.component.html'
+  selector: 'article-list',
+  providers: [ArticleService],
+  templateUrl: 'article-list.component.html'
 })
 export class ArticleListComponent implements OnInit, OnDestroy {
 
-    private htmlElement: HTMLElement;
+  private htmlElement: HTMLElement;
 
-    articles: RegisteredArticle[];
+  articles: RegisteredArticle[];
 
-    isProcessing: boolean;
+  isProcessing: boolean;
 
-    selectedArticle: RegisteredArticle;
+  selectedArticle: RegisteredArticle;
 
-    constructor(
-        private elementRef: ElementRef,
-        private articleService: ArticleService,
-    ) {
-        this.isProcessing = false;
-        this.htmlElement = this.elementRef.nativeElement;
-    }
+  constructor(
+    private elementRef: ElementRef,
+    private articleService: ArticleService,
+  ) {
+    this.isProcessing = false;
+    this.htmlElement = this.elementRef.nativeElement;
+  }
 
-    ngOnInit(): void {
-        this.onChangeAppState = this.onChangeAppState.bind(this);
-        AppStore.getInstance().registerHandler('CHANGE', this.onChangeAppState);
-        ProcessingModalAction.setProcessingFlag(true);
-        this.articleService.findAllArticles().subscribe((registerdArticles) => {
-            ArticleAction.change(registerdArticles);
-        }, (error) => {
-            console.error(error);
-        }, () => {
-            ProcessingModalAction.setProcessingFlag(false);
-        });
-    }
+  ngOnInit(): void {
+    this.onChangeAppState = this.onChangeAppState.bind(this);
+    AppStore.getInstance().registerHandler('CHANGE', this.onChangeAppState);
+    ProcessingModalAction.setProcessingFlag(true);
+    this.articleService.findAllArticles().subscribe((registerdArticles) => {
+      ArticleAction.change(registerdArticles);
+    }, (error) => {
+      console.error(error);
+    }, () => {
+      ProcessingModalAction.setProcessingFlag(false);
+    });
+  }
 
-    ngOnDestroy(): void {
-        AppStore.getInstance().removeHandler('CHANGE', this.onChangeAppState);
-    }
+  ngOnDestroy(): void {
+    AppStore.getInstance().removeHandler('CHANGE', this.onChangeAppState);
+  }
 
-    private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState) {
-        this.articles = currentAppState.articles;
-        this.isProcessing = currentAppState.isProcessing;
-    }
+  private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState) {
+    this.articles = currentAppState.articles;
+    this.isProcessing = currentAppState.isProcessing;
+  }
 
-    titleChanged(event: Event): void {
-        this.selectedArticle.title = (event.target as HTMLInputElement).value;
-    }
+  titleChanged(event: Event): void {
+    this.selectedArticle.title = (event.target as HTMLInputElement).value;
+  }
 
-    bodyChanged(event: Event): void {
-        this.selectedArticle.body = (event.target as HTMLInputElement).value;
-    }
+  bodyChanged(event: Event): void {
+    this.selectedArticle.body = (event.target as HTMLInputElement).value;
+  }
 
-}
+}　

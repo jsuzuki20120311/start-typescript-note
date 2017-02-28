@@ -6,9 +6,9 @@ import { AppStore } from '../common/AppStore';
 import { ArticleService } from "../services/ArticleService";
 
 @Component({
-    selector: 'article-editor',
-    providers: [ ArticleService ],
-    template: `
+  selector: 'article-editor',
+  providers: [ArticleService],
+  template: `
     <h2>記事の作成</h2>
     <div *ngIf="!isCompleted">
       <div class="container">
@@ -48,50 +48,50 @@ import { ArticleService } from "../services/ArticleService";
 })
 export class ArticleEditorComponent implements OnInit, OnDestroy {
 
-    article: Article;
+  article: Article;
 
-    isProcessing: boolean;
+  isProcessing: boolean;
 
-    isCompleted: boolean;
+  isCompleted: boolean;
 
-    constructor(
-        private articleService: ArticleService
-    ) {
-    }
+  constructor(
+    private articleService: ArticleService
+  ) {
+  }
 
-    ngOnInit(): void {
-        this.article = {
-            title: '',
-            body: ''
-        };
-        this.isProcessing = false;
-        this.isCompleted = false;
-        this.onChangeAppState = this.onChangeAppState.bind(this);
-        AppStore.getInstance().registerHandler('CHANGE', this.onChangeAppState);
-    }
+  ngOnInit(): void {
+    this.article = {
+      title: '',
+      body: ''
+    };
+    this.isProcessing = false;
+    this.isCompleted = false;
+    this.onChangeAppState = this.onChangeAppState.bind(this);
+    AppStore.getInstance().registerHandler('CHANGE', this.onChangeAppState);
+  }
 
-    ngOnDestroy(): void {
-        AppStore.getInstance().removeHandler('CHANGE', this.onChangeAppState);
-    }
+  ngOnDestroy(): void {
+    AppStore.getInstance().removeHandler('CHANGE', this.onChangeAppState);
+  }
 
-    titleChanged(event: Event): void {
-        this.article.title = (event.target as HTMLInputElement).value;
-    }
+  titleChanged(event: Event): void {
+    this.article.title = (event.target as HTMLInputElement).value;
+  }
 
-    bodyChanged(event: Event): void {
-        this.article.body = (event.target as HTMLInputElement).value;
-    }
+  bodyChanged(event: Event): void {
+    this.article.body = (event.target as HTMLInputElement).value;
+  }
 
-    registerButtonClicked(): void {
-        ProcessingModalAction.setProcessingFlag(true);
-        this.articleService.create(this.article).subscribe(() => {
-            ProcessingModalAction.setProcessingFlag(false);
-            this.isCompleted = true;
-        });
-    }
+  registerButtonClicked(): void {
+    ProcessingModalAction.setProcessingFlag(true);
+    this.articleService.create(this.article).subscribe(() => {
+      ProcessingModalAction.setProcessingFlag(false);
+      this.isCompleted = true;
+    });
+  }
 
-    private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState): void {
-        this.isProcessing = currentAppState.isProcessing;
-    }
+  private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState): void {
+    this.isProcessing = currentAppState.isProcessing;
+  }
 
 }

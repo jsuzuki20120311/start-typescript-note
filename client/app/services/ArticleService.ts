@@ -9,6 +9,12 @@ export class ArticleService {
 
   private static readonly API = 'article';
 
+  /**
+   * Creates an instance of ArticleService.
+   * @param {Http} http 
+   * 
+   * @memberOf ArticleService
+   */
   constructor(private http: Http) {
   }
 

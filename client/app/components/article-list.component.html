@@ -1,23 +1,23 @@
 <h2>記事</h2>
 <table class="table" *ngIf="articles">
-    <tr>
+  <tr>
     <th>id</th>
     <th>タイトル</th>
     <th>作成日時</th>
     <th>更新日時</th>
     <th>操作</th>
-    </tr>
-    <tr *ngFor="let article of articles">
+  </tr>
+  <tr *ngFor="let article of articles">
     <td>{{ article.id }}</td>
     <td>{{ article.title }}</td>
     <td>{{ article.createdAt }}</td>
     <td>{{ article.updatedAt }}</td>
     <td>
-        <a [routerLink]="['/update-article', article.id]">
+      <a [routerLink]="['/update-article', article.id]">
         <button class="btn btn-primary"> 
             編集
         </button>
-        </a>
+      </a>
     </td>
-    </tr>
+  </tr>
 </table>
