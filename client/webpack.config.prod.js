@@ -1,7 +1,7 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
 var AotPlugin = require('@ngtools/webpack').AotPlugin;
-var helpers = require('./config/helpers');
+var helpers = require('./helpers');
 
 module.exports = {
     devtool: '#source-map',
