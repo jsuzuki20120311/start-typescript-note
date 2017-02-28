@@ -9,9 +9,6 @@ module.exports = {
         app: './app/app.ts',
         vendor: './app/vendor.ts'
     },
-    externals: {
-        "jquery": "jQuery"
-    },
     module: {
         rules: [
             { test: /\.html$/, loader: 'raw-loader' },
@@ -34,8 +31,11 @@ module.exports = {
         new CopyWebpackPlugin([
             {
                 from: './index.html',
-                to: './',
-                flatten: true
+                to: './'
+            },
+            {
+                from: './styles/*.css',
+                to: './'
             }
         ]),
         new webpack.optimize.UglifyJsPlugin({

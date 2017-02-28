@@ -1,34 +1,9 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" [routerLink]="['/']">Sample Crud Application</a>
-      <a class="navbar-brand" [routerLink]="['/article-editor']">新規作成</a>
-    </div>
-  </div>
-</nav>
+<h1>Sample Application</h1>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="one column">
+      <a class="navbar-brand" [routerLink]="['/article-editor']">新規作成</a>
       <router-outlet></router-outlet>
     </div>
   </div>
-</div>
-
-<div class="sample-app-modal modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">
-          <span class="glyphicon glyphicon-time"></span> Please Wait
-        </h4>
-      </div>
-      <div class="modal-body">
-        <div class="progress">
-          <div class="progress-bar progress-bar-info
-                progress-bar-striped active" style="width: 100%">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </div>

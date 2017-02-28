@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AppStore } from '../common/AppStore';
@@ -31,8 +30,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState) {
-    const modalState = currentAppState.isProcessing ? 'show' : 'hide';
-    $(this.htmlElement).find('.sample-app-modal').modal(modalState);
+    // const modalState = currentAppState.isProcessing ? 'show' : 'hide';
+    // $(this.htmlElement).find('.sample-app-modal').modal(modalState);
   }
 
 }

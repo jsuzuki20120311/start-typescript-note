@@ -7,9 +7,6 @@ module.exports = {
     app: './app/app.ts',
     vendor: './app/vendor.ts'
   },
-  externals: {
-    "jquery": "jQuery"
-  },
   module: {
     loaders: [
       {
@@ -26,8 +23,11 @@ module.exports = {
     new CopyWebpackPlugin([
         {
           from: './index.html',
-          to: './',
-          flatten: true
+          to: './'
+        },
+        {
+          from: './styles/*.css',
+          to: './'
         },
         {
           from: './app/**/*.html',
