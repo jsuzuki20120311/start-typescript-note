@@ -9,7 +9,7 @@ import { ProcessingModalAction } from '../actions/ProcessingModalAction';
 @Component({
   selector: 'article-list',
   providers: [ArticleService],
-  templateUrl: 'article-list.component.html'
+  templateUrl: './article-list.component.html'
 })
 export class ArticleListComponent implements OnInit, OnDestroy {
 

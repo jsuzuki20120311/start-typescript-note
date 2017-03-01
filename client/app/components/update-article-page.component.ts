@@ -7,7 +7,7 @@ import { ArticleService } from '../services/ArticleService';
 @Component({
   selector: 'update-article-page',
   providers: [ ArticleService ],
-  templateUrl: 'update-article-page.component.html'
+  templateUrl: './update-article-page.component.html'
 })
 export class UpdateArticlePageComponent implements OnInit {
 

@@ -13,7 +13,7 @@
 
  * 開発環境の準備
 
- * Helo World
+ * Hello World
 
  * TypeScriptの要素について
 
