@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
 import { AppStore } from '../common/AppStore';
-import { ArticleService } from "../services/ArticleService";
-import { AppState } from "../models/AppState";
-import { RegisteredArticle } from "../models/RegisteredArticle";
+import { ArticleService } from '../services/ArticleService';
+import { AppState } from '../models/AppState';
+import { RegisteredArticle } from '../models/RegisteredArticle';
 import { ArticleAction } from '../actions/ArticleAction';
 import { ProcessingModalAction } from '../actions/ProcessingModalAction';
 
@@ -33,13 +33,12 @@ export class ArticleListComponent implements OnInit, OnDestroy {
     this.onChangeAppState = this.onChangeAppState.bind(this);
     AppStore.getInstance().registerHandler('CHANGE', this.onChangeAppState);
     ProcessingModalAction.setProcessingFlag(true);
-    this.articleService.findAllArticles().subscribe((registerdArticles) => {
-      ArticleAction.change(registerdArticles);
-    }, (error) => {
-      console.error(error);
-    }, () => {
-      ProcessingModalAction.setProcessingFlag(false);
-    });
+    this.articleService
+      .findAllArticles()
+      .subscribe(
+        this.onSubscribeArticles.bind(this),
+        this.onSubscribeError.bind(this),
+        this.onSubscribeComplete.bind(this));
   }
 
   ngOnDestroy(): void {
@@ -51,12 +50,16 @@ export class ArticleListComponent implements OnInit, OnDestroy {
     this.isProcessing = currentAppState.isProcessing;
   }
 
-  titleChanged(event: Event): void {
-    this.selectedArticle.title = (event.target as HTMLInputElement).value;
+  private onSubscribeArticles(registerdArticles: RegisteredArticle[]) {
+    ArticleAction.change(registerdArticles);
   }
 
-  bodyChanged(event: Event): void {
-    this.selectedArticle.body = (event.target as HTMLInputElement).value;
+  private onSubscribeError(error: any) {
+    console.error(error);
+  }
+    
+  private onSubscribeComplete() {
+    ProcessingModalAction.setProcessingFlag(false);
   }
 
 }　

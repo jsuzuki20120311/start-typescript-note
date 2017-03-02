@@ -4,7 +4,7 @@
   "scripts": {
     "build": "webpack --progress --colors --config webpack.config.dev.js",
     "watch": "webpack --progress --colors --watch --config webpack.config.dev.js",
-    "build-product": "webpack --progress --colors --config webpack.config.prod.js --env.MODE=prod",
+    "build-product": "webpack --progress --colors --config webpack.config.prod.js",
     "watch-product": "webpack --progress --colors --watch --config webpack.config.prod.js"
   },
   "license": "MIT",

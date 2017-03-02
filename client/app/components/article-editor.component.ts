@@ -3,48 +3,12 @@ import { ProcessingModalAction } from '../actions/ProcessingModalAction';
 import { AppState } from '../models/AppState';
 import { Article } from '../models/Article';
 import { AppStore } from '../common/AppStore';
-import { ArticleService } from "../services/ArticleService";
+import { ArticleService } from '../services/ArticleService';
 
 @Component({
   selector: 'article-editor',
   providers: [ArticleService],
-  template: `
-    <h2>記事の作成</h2>
-    <div *ngIf="!isCompleted">
-      <div class="container">
-        <form>
-          <div class="form-group">
-            <label>記事タイトル</label>
-            <input type="text" 
-                placeholder="タイトル"
-                class="form-control" 
-                value="{{ article.title }}" 
-                (change)="titleChanged($event)" 
-                [attr.disabled]="isProcessing ? true : null">
-          </div>
-          <div class="form-group">
-            <label>本文</label>
-            <textarea placeholder="本文" 
-                rows="10"
-                (change)="bodyChanged($event)"
-                class="form-control" 
-                value="{{ article.body }}"
-                [attr.disabled]="isProcessing ? true : null">
-            </textarea>
-          </div>
-          <button class="btn btn-primary" 
-              data-dismiss="modal" 
-              (click)="registerButtonClicked()" 
-              [attr.disabled]="isProcessing ? true : null">
-            登録
-          </button>
-        </form>
-      </div>
-    </div>
-    <div *ngIf="isCompleted">
-      完了しました。
-    </div>
-  `
+  templateUrl: './article-editor.component.html'
 })
 export class ArticleEditorComponent implements OnInit, OnDestroy {
 

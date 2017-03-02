@@ -10,13 +10,19 @@ import { AppState } from '../models/AppState';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  isProcessing: boolean;
+
   private htmlElement: HTMLElement;
 
+  /**
+   * コンストラクタ
+   */
   constructor(
     private router: Router,
     private route: ActivatedRoute, 
     private elementRef: ElementRef
   ) {
+    this.isProcessing = false;
     this.htmlElement = this.elementRef.nativeElement;
   }
 
@@ -30,8 +36,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState) {
-    // const modalState = currentAppState.isProcessing ? 'show' : 'hide';
-    // $(this.htmlElement).find('.sample-app-modal').modal(modalState);
+    this.isProcessing = currentAppState.isProcessing;
   }
 
 }
