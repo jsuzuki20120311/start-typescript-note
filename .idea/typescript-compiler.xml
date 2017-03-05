@@ -3,7 +3,6 @@
   <component name="TypeScriptCompiler">
     <option name="isCompilerEnabled" value="true" />
     <option name="typeScriptServiceDirectory" value="$PROJECT_DIR$/server/node_modules/typescript/lib" />
-    <option name="nodeInterpreterTextField" value="$USER_HOME$/.nodebrew/current/bin/node" />
     <option name="scopeName" value="server" />
     <option name="useConfig" value="true" />
     <option name="versionType" value="SERVICE_DIRECTORY" />

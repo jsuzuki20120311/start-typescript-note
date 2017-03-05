@@ -62,4 +62,4 @@ export class ArticleListComponent implements OnInit, OnDestroy {
     ProcessingModalAction.setProcessingFlag(false);
   }
 
-}　
+}
