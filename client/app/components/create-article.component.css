@@ -1,0 +1,3 @@
+.article__body {
+  height: calc(100vh - 500px);
+}

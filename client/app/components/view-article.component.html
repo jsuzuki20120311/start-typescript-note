@@ -1,0 +1,10 @@
+<p>
+  <a [routerLink]="['/']">もどる</a>
+</p>
+
+<div *ngIf="article" class="u-full-width">
+  <h2>{{ article.title }}</h2>
+  <div>
+    <p class="u-full-width article__body">{{ article.body }}</p>
+  </div>
+</div>

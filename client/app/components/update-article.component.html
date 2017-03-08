@@ -1,0 +1,40 @@
+<p>
+  <a [routerLink]="['/']">もどる</a>
+</p>
+
+<h2>記事の更新</h2>
+
+<div *ngIf="!isCompleted" class="u-full-width">
+  <div *ngIf="article">
+    <div>
+      <label>記事タイトル</label>
+      <input type="text"
+        placeholder="タイトル"
+        class="u-full-width" 
+        value="{{ article.title }}" 
+        (change)="titleChanged($event)" 
+        [attr.disabled]="isProcessing ? true : null">
+    </div>
+    <div>
+      <label>本文</label>
+      <textarea
+        class="u-full-width article__body"
+        placeholder="本文"
+        rows="10"
+        value="{{ article.body }}"
+        (change)="bodyChanged($event)"
+        [attr.disabled]="isProcessing ? true : null">
+      </textarea>
+    </div>
+    <div>
+      <button class="button-primary"
+        [attr.disabled]="isProcessing ? true : null" 
+        (click)="updateButtonClicked()">
+        更新
+      </button>
+    </div>
+  </div>
+</div>
+<div *ngIf="isCompleted">
+  <a [routerLink]="['/']">一覧にもどる</a>
+</div>
