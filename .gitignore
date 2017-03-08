@@ -6,7 +6,6 @@ node_modules
 db_config.json
 server/public/
 
-!favicon.png
 !helpers.js
 !webpack.config.dev.js
 !webpack.config.prod.js
