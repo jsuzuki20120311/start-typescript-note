@@ -1,3 +1,4 @@
+// polyfills
 import 'core-js/shim';
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
@@ -12,3 +13,7 @@ import '@angular/router';
 
 // RxJS
 import 'rxjs';
+
+// others
+import 'jquery';
+import 'toastr';

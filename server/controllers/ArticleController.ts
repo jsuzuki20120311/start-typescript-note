@@ -1,8 +1,8 @@
 import * as express from 'express';
-import * as mysql from 'mysql';
 import { ArticleService } from '../services/ArticleService';
-import { DbConfigManager } from '../config/DbConfigManager';
-import { ArticleDao } from '../dao/ArticleDao';
+import { AppError } from "../models/AppError";
+import { Article } from "../models/Article";
+import { RegisteredArticle } from "../models/RegisteredArticle";
 
 /**
  * 記事API用コントローラ
@@ -11,12 +11,15 @@ export class ArticleController {
 
   private articleService: ArticleService;
 
+  /**
+   * コンストラクタ
+   */
   constructor() {
     this.articleService = new ArticleService();
   }
 
   all(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    this.articleService.getAllArticles()
+    this.articleService.findAllArticles()
       .then((articles) => {
         res.send({data: articles});
       })
@@ -27,101 +30,112 @@ export class ArticleController {
   }
 
   index(req: express.Request, res: express.Response, next: express.NextFunction): void {
-
+    const offset = Number.parseInt(req.query.offset, 10);
+    const limit = Number.parseInt(req.query.limit, 10);
+    if (Number.isNaN(offset) || Number.isNaN(limit)) {
+      const error = new AppError('Not found.');
+      error.status = 400;
+      next(error);
+      return;
+    }
+    this.articleService.findArticles(offset, limit)
+      .then((articles) => {
+        res.send({ data: articles })
+      })
+      .catch((error) => {
+        error.status = error.status || 500;
+        next(error);
+      });
   }
 
   count(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    const connection = mysql.createConnection(DbConfigManager.getConfig());
-    connection.connect();
-    const articleDao = new ArticleDao(connection);
-    articleDao.findCount()
-    .then((count) => {
-      connection.destroy();;
-      res.send({ data: count });
-    })
-    .catch(() => {
-      connection.destroy();;
-      next({ status: 500 });
-    });
+    this.articleService.findArticleCount()
+      .then((count) => {
+        res.send({ data: count });
+      })
+      .catch((error) => {
+        error.status = error.status || 500;
+        next(error);
+      });
   }
 
   create(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    const connection = mysql.createConnection(DbConfigManager.getConfig());
-    const articleDao = new ArticleDao(connection);
-    connection.connect();
-    articleDao.createArticle(req.body)
-    .then((results) => {
-      connection.destroy();;
-      res.send({ data: results });
-    })
-    .catch(() => {
-      connection.destroy();;
-      next({ status: 500 });
-    });
+    const article: Article = req.body;
+    if (!article.title) {
+      const error = new AppError('タイトルが空です。');
+      error.status = 400;
+      next(error);
+      return;
+    }
+    this.articleService.createArticle(article)
+      .then((insertId) => {
+        res.send({ data: insertId });
+      })
+      .catch((error) => {
+        error.status = error.status || 500;
+        next(error);
+      });
   }
 
   read(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    const connection = mysql.createConnection(DbConfigManager.getConfig());
-    connection.connect();
-    const articleDao = new ArticleDao(connection);
-    articleDao.findArticleById(parseInt(req.params.id, 10))
-    .then((results) => {
-      connection.destroy();;
-      res.send({ data: results });
-    })
-    .catch(() => {
-      connection.destroy();;
-      next({ status: 500 });
-    });
+    const id = Number.parseInt(req.params.id, 10);
+    if (Number.isNaN(id)) {
+      const error = new AppError();
+      error.status = 400;
+      next(error);
+      return;
+    }
+    this.articleService.findArticle(id)
+      .then((result) => {
+        res.send({ data: result });
+      })
+      .catch((error) => {
+        error.status = error.status || 500;
+        next(error);
+      });
   }
 
   update(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    const connection = mysql.createConnection(DbConfigManager.getConfig());
-    connection.connect();
-    const articleId = parseInt(req.params.id, 10);
-    const articleDao = new ArticleDao(connection);
-    articleDao.lock(articleId)
-    .then((results) => {
-      if (!Array.isArray(results) || results.length === 0) {
-        return Promise.reject({status: 404}); 
-      }
-      if (results[0].updatedAt !== req.body.updatedAt) {
-        return Promise.reject({status: 409});
-      }
-      return articleDao.updateArticle(articleId, req.body);
-    })
-    .then((results) => {
-      connection.destroy();;
-      res.send({ data: results });
-    })
-    .catch((error) => {
-      connection.destroy();;
-      error.status = error.status || 500;
+    const id = Number.parseInt(req.params.id, 10);
+    const article: RegisteredArticle = req.body;
+    if (!article.title) {
+      const error = new AppError('タイトルが空です。');
+      error.status = 400;
       next(error);
-    });
+      return;
+    }
+    if (Number.isNaN(id)) {
+      const error = new AppError();
+      error.status = 400;
+      next(error);
+      return;
+    }
+    this.articleService.modifyArticle(id, article)
+      .then((result) => {
+        res.send({ data: result });
+      })
+      .catch((error) => {
+        error.status = error.status || 500;
+        next(error);
+      });
   }
 
   delete(req: express.Request, res: express.Response, next: express.NextFunction): void {
-    const connection = mysql.createConnection(DbConfigManager.getConfig());
-    connection.connect();
-    const articleDao = new ArticleDao(connection);
-    const articleId = parseInt(req.params.id, 10);
-    articleDao.lock(articleId)
-    .then((results) => {
-      if (!Array.isArray(results) || results.length === 0) {
-        return Promise.reject({status: 404});
-      }
-      return articleDao.deleteArticle(articleId);
-    })
-    .then((results) => {
-      connection.destroy();
-      res.send({ data: results });
-    })
-    .catch((error) => {
-      connection.destroy();;
-      error.status = error.status || 500;
-      next({ status: 500 });
-    });
+    const id = Number.parseInt(req.params.id, 10);
+    if (Number.isNaN(id)) {
+      const error = new AppError();
+      error.status = 400;
+      next(error);
+      return;
+    }
+    this.articleService.removeArticle(id)
+      .then((result) => {
+        res.send({ data: result });
+      })
+      .catch((error) => {
+        error.status = error.status || 500;
+        next(error);
+      });
   }
 
 }

@@ -1,25 +1,33 @@
-<h2>記事</h2>
-<table class="u-full-width" *ngIf="articles">
+<p>
+  <a [routerLink]="['/createArticle']">新規作成</a>
+</p>
+
+<h2>記事一覧</h2>
+
+<div *ngIf="articles.length === 0" class="u-full-width">
+  登録された記事がありません。
+</div>
+
+<table *ngIf="articles.length > 0" class="u-full-width">
   <tr>
     <th>id</th>
     <th>タイトル</th>
-    <th>本文</th>
     <th>作成日時</th>
     <th>更新日時</th>
     <th>操作</th>
   </tr>
   <tr *ngFor="let article of articles">
     <td>{{ article.id }}</td>
-    <td>{{ article.body }}</td>
-    <td>{{ article.title }}</td>
+    <td><a [routerLink]="['/viewArticle', article.id]">{{ article.title }}</a></td>
     <td>{{ article.createdAt }}</td>
     <td>{{ article.updatedAt }}</td>
     <td>
-      <a [routerLink]="['/update-article', article.id]">
-        <button class="button-primary"> 
-          編集
-        </button>
+      <a class="button button-primary" [routerLink]="['/updateArticle', article.id]">
+        編集
       </a>
+      <button (click)="deleteButtonClicked(article.id)" [attr.disabled]="isProcessing ? true : null">
+        削除
+      </button>
     </td>
   </tr>
 </table>

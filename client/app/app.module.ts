@@ -3,25 +3,43 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { Routes } from './Routes';
 import { AppComponent } from './components/app.component';
 import { ArticleListComponent } from './components/article-list.component';
-import { ArticleEditorComponent } from './components/article-editor.component';
-import { UpdateArticlePageComponent } from './components/update-article-page.component';
+import { CreateArticleComponent } from './components/create-article.component';
+import { UpdateArticleComponent } from './components/update-article.component';
+import { ViewArticleComponent } from './components/view-article.component';
 
 @NgModule({
-  bootstrap: [ AppComponent ],
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent,
     ArticleListComponent,
-    ArticleEditorComponent,
-    UpdateArticlePageComponent
+    CreateArticleComponent,
+    UpdateArticleComponent,
+    ViewArticleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(Routes.CONFIG)
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: ArticleListComponent
+      },
+      {
+        path: 'createArticle',
+        component: CreateArticleComponent
+      },
+      {
+        path: 'viewArticle/:id',
+        component: ViewArticleComponent
+      },
+      {
+        path: 'updateArticle/:id',
+        component: UpdateArticleComponent
+      }
+    ])
   ]
 })
 export class AppModule {

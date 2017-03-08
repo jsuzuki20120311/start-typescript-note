@@ -1,5 +1,3 @@
-'use strict';
-
 import { AppStore } from "../common/AppStore";
 
 export class ProcessingModalAction {

@@ -1,5 +1,6 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var webpack = require('webpack');
+var helpers = require('./helpers');
 
 module.exports = {
   devtool: 'source-map',
@@ -8,7 +9,7 @@ module.exports = {
     vendor: './app/vendor.ts'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
         loader: 'ts-loader'
@@ -30,6 +31,10 @@ module.exports = {
           to: './'
         },
         {
+          from: './favicon.png',
+          to: './'
+        },
+        {
           from: './app/**/*.html',
           to: './',
           flatten: true
@@ -43,6 +48,12 @@ module.exports = {
       {
         ignore: [ '.DS_Store', '.gitkeep' ]
       }
+    ),
+    new webpack.ContextReplacementPlugin(
+        // The (\\|\/) piece accounts for path separators in *nix and Windows
+        /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+        helpers.root('./src'), // location of your src
+        {} // a map of your routes
     ),
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor']

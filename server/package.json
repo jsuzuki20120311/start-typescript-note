@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./www/index.js",
   "scripts": {
-    "start": "node ./www/index.js",
+    "start": "node ./www/index.js NODE_ENV=production",
     "dev": "tsc --watch & node-dev ./www/index.js",
     "build": "tsc",
     "watch": "tsc --watch"

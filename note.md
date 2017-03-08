@@ -1,7 +1,8 @@
-# さあTypeScriptを始めましょう
+# TypeScript + express + Angular2 でつくるシングルページアプリケーション
 
 
 ![こんにちは、TypeScript](./image/konnitihaTypeScript.png "画像タイトル")
+
 
 
 **さあTypeScriptを始めましょう**
@@ -25,6 +26,8 @@
 
    - 構造的部分型
 
+   - async await
+
  * ライブラリと型定義のインストール
    
    - ライブラリのインストール
@@ -35,6 +38,12 @@
    
   - 要件
   
+  - ディレクトリ構成
+
+  - データベースについて
+  
+  - MySQLのインストール
+
 
  * バックエンドの環境構築
 
@@ -44,16 +53,42 @@
 
   - Expressの型定義ファイルのインストール
 
+  - 静的ファイルへのルーティング
+  
+  - エラーページへのルーティング
+  
+  - APIへのルーティング
 
+  - モデルクラスの作成
+
+  - コントローラの作成
+  
+  - サービスクラスの作成
+  
+  - DAOクラスの作成
 
 
  * フロントエンド開発の環境構築
 
-   - Webpackの設定
+  - Angular2 について
+   
+  - RxJSについて
 
-   - package.jsonの設定
+  - Webpackの設定
 
-   - 
+  - package.jsonの設定
+
+  - 設定クラスの作成
+
+  - コンポーネントの作成
+
+  - ディスパッチャの作成
+
+  - 非同期通信処理
+
+
+ * 参考文献
+
 
 
 
@@ -584,7 +619,7 @@ module.exports = {
 
 ### Angular2 をTypeScriptで使用する
 
-以下の内容でpackage.jsonを作成し、 npm install を行います。
+  以下の内容でpackage.jsonを作成し、 npm install を行います。
 
 ```json
 {
@@ -632,6 +667,11 @@ module.exports = {
   }
 }
 ```
+
+
+
+
+
 
 
 

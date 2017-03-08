@@ -1,12 +1,6 @@
 <div class="container">
-  <h1>Sample Application</h1>
-  <p>
-    <a [routerLink]="['/']">記事一覧</a>
-    <a [routerLink]="['/article-editor']">新規作成</a>
-  </p>
-
+  <h1>Sample CRUD Application</h1>
   <router-outlet></router-outlet>
-
   <div *ngIf="isProcessing" class="loading-container">
     <div class="loading"></div>
   </div>

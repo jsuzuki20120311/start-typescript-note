@@ -4,16 +4,15 @@ import * as Rx from 'rxjs';
 import { Config } from '../Config';
 import { Article } from "../models/Article";
 
+
 @Injectable()
 export class ArticleService {
 
   private static readonly API = 'article';
 
   /**
-   * Creates an instance of ArticleService.
-   * @param {Http} http 
-   * 
-   * @memberOf ArticleService
+   * コンストラクタ
+   * @param {Http} http
    */
   constructor(private http: Http) {
   }
@@ -26,22 +25,29 @@ export class ArticleService {
   }
 
   findArticleById(id: number): Rx.Observable<any> {
+    const headers = new Headers({ 'x-requested-with': 'XMLHttpRequest' });
+    const requestOptions = new RequestOptions({ headers: headers });
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
-    return this.http.get(encodeURI(url))
+    return this.http.get(encodeURI(url), requestOptions)
       .map(this.extractData)
       .catch(this.handleError);
   }
 
   findAllArticles(): Rx.Observable<any> {
+    const headers = new Headers({ 'x-requested-with': 'XMLHttpRequest' });
+    const requestOptions = new RequestOptions({ headers: headers });
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/all`;
-    return this.http.get(encodeURI(url))
+    return this.http.get(encodeURI(url), requestOptions)
       .map(this.extractData)
       .catch(this.handleError);
   }
 
   create(article: Article): Rx.Observable<any> {
     const sendData = JSON.stringify(article);
-    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const headers = new Headers({
+      'x-requested-with': 'XMLHttpRequest',
+      'Content-Type': 'application/json'
+    });
     const requestOptions = new RequestOptions({ headers: headers });
     return this.http.put(encodeURI(`${Config.getInstance().getApiRoot()}${ArticleService.API}`), sendData, requestOptions)
       .map(this.extractData)
@@ -51,7 +57,10 @@ export class ArticleService {
   update(id: number, article: Article): Rx.Observable<any> {
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
     const sendData = JSON.stringify(article);
-    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const headers = new Headers({
+      'x-requested-with': 'XMLHttpRequest',
+      'Content-Type': 'application/json'
+    });
     const requestOptions = new RequestOptions({ headers: headers });
     return this.http.post(encodeURI(url), sendData, requestOptions)
       .map(this.extractData)
@@ -59,8 +68,10 @@ export class ArticleService {
   }
 
   delete(id: number): Rx.Observable<any> {
+    const headers = new Headers({ 'x-requested-with': 'XMLHttpRequest' });
+    const requestOptions = new RequestOptions({ headers: headers });
     const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
-    return this.http.delete(encodeURI(url))
+    return this.http.delete(encodeURI(url), requestOptions)
       .map(this.extractData)
       .catch(this.handleError);
   }
@@ -73,8 +84,8 @@ export class ArticleService {
   }
 
   private handleError (error: any): any {
-    const errMsg = error.message || 'Server error';
-    return Rx.Observable.throw(errMsg);
+    const errorMessage = error.message || error.json().message || 'Server error';
+    return Rx.Observable.throw(errorMessage);
   }
 
 }

@@ -1,5 +1,5 @@
 import * as bodyParser from 'body-parser';
-import * as ejs from 'ejs';
+import 'ejs';
 import * as express from 'express';
 import * as path from 'path';
 import * as favicon from 'serve-favicon';
@@ -33,19 +33,19 @@ app.use('/api', api);
 app.use((req, res, next) => {
   const err = {
     status: 404,
-    message: 'Not Found'
+    message: 'Not Found.'
   };
   next(err);
 });
 
-// エラーハンドラー
+// エラーハンドラ
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
   err.status = err.status || 500;
   res.status(err.status);
   if (req.xhr) {
-    res.send(err);
+    res.send({ status: err.status, message: err.message });
   } else {
-    res.render('error', err);
+    res.render('error', { status: err.status, message: err.message });
   }
 });
 

@@ -19,7 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
    */
   constructor(
     private router: Router,
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private elementRef: ElementRef
   ) {
     this.isProcessing = false;

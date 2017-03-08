@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import * as toastr from 'toastr';
 import { AppStore } from '../common/AppStore';
 import { ArticleService } from '../services/ArticleService';
 import { AppState } from '../models/AppState';
@@ -19,8 +20,6 @@ export class ArticleListComponent implements OnInit, OnDestroy {
 
   isProcessing: boolean;
 
-  selectedArticle: RegisteredArticle;
-
   constructor(
     private elementRef: ElementRef,
     private articleService: ArticleService,
@@ -32,33 +31,46 @@ export class ArticleListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.onChangeAppState = this.onChangeAppState.bind(this);
     AppStore.getInstance().registerHandler('CHANGE', this.onChangeAppState);
-    ProcessingModalAction.setProcessingFlag(true);
-    this.articleService
-      .findAllArticles()
-      .subscribe(
-        this.onSubscribeArticles.bind(this),
-        this.onSubscribeError.bind(this),
-        this.onSubscribeComplete.bind(this));
+    this.updateArticleList();
   }
 
   ngOnDestroy(): void {
     AppStore.getInstance().removeHandler('CHANGE', this.onChangeAppState);
   }
 
+  deleteButtonClicked(articleId: number): void {
+    ProcessingModalAction.setProcessingFlag(true);
+    this.articleService.delete(articleId).subscribe(
+      this.onDeleteArticle.bind(this),
+      this.onError.bind(this));
+  }
+
+  private updateArticleList(): void {
+    ProcessingModalAction.setProcessingFlag(true);
+    this.articleService
+      .findAllArticles()
+      .subscribe(
+        this.onFindArticles.bind(this),
+        this.onError.bind(this));
+  }
+  
   private onChangeAppState(eventName: string, beforeAppState: AppState, currentAppState: AppState) {
     this.articles = currentAppState.articles;
     this.isProcessing = currentAppState.isProcessing;
   }
 
-  private onSubscribeArticles(registerdArticles: RegisteredArticle[]) {
+  private onFindArticles(registerdArticles: RegisteredArticle[]): void {
     ArticleAction.change(registerdArticles);
+    ProcessingModalAction.setProcessingFlag(false);
   }
 
-  private onSubscribeError(error: any) {
-    console.error(error);
+  private onDeleteArticle(): void {
+    toastr.success('削除完了');
+    this.updateArticleList();
   }
-    
-  private onSubscribeComplete() {
+
+  private onError(errorMessage: string): void {
+    toastr.error(errorMessage);
     ProcessingModalAction.setProcessingFlag(false);
   }
 
