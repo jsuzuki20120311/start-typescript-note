@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4e6998e-7e5a-49e8-864f-8b73d66cec12" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/create-article.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/create-article.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/create-article.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/update-article.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/update-article.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/update-article.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/view-article.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/view-article.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/app/components/view-article.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/models/AppError.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/api/v1/article.ts" afterPath="$PROJECT_DIR$/server/routes/api/v1/article.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,12 +69,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/app.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="-457">
               <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/routes/api/v1/article.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,16 +116,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
               <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -184,7 +177,6 @@
         <option value="$PROJECT_DIR$/code/server/package.json" />
         <option value="$PROJECT_DIR$/client/script/src/Config.ts" />
         <option value="$PROJECT_DIR$/server/models/AppError.ts" />
-        <option value="$PROJECT_DIR$/server/routes/api/v1/article.ts" />
         <option value="$PROJECT_DIR$/client/app/components/update-article-page.component.html" />
         <option value="$PROJECT_DIR$/client/app/components/update-article-page.component.ts" />
         <option value="$PROJECT_DIR$/server/public/app.component.html" />
@@ -225,6 +217,7 @@
         <option value="$PROJECT_DIR$/server/json/db_config.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/app/Routes.ts" />
+        <option value="$PROJECT_DIR$/server/routes/api/v1/article.ts" />
       </list>
     </option>
   </component>
@@ -308,6 +301,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="start-typescript-note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="start-typescript-note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="start-typescript-note" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -801,7 +848,7 @@
       <workItem from="1488847460103" duration="26147000" />
       <workItem from="1488935105460" duration="4120000" />
       <workItem from="1488962927273" duration="709000" />
-      <workItem from="1488976535465" duration="1423000" />
+      <workItem from="1488976535465" duration="2077000" />
     </task>
     <task id="LOCAL-00001" summary="GIT管理から漏れていたWebpack設定ファイルを追加。">
       <created>1486871456900</created>
@@ -908,11 +955,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488977903190</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="push漏れをpush">
+      <created>1488977992982</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1488977992982</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67273000" />
+    <option name="totallyTimeSpent" value="67927000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1002,9 +1056,9 @@
     <MESSAGE value="console.logの削除。" />
     <MESSAGE value="commit." />
     <MESSAGE value="バグ修正。webpackの設定を修正。" />
-    <MESSAGE value="push漏れをpush" />
     <MESSAGE value="不要なファイルを削除。" />
-    <option name="LAST_COMMIT_MESSAGE" value="不要なファイルを削除。" />
+    <MESSAGE value="push漏れをpush" />
+    <option name="LAST_COMMIT_MESSAGE" value="push漏れをpush" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1024,7 +1078,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/app/routes.ts" />
     <entry file="file://$PROJECT_DIR$/client/app/components/update-article.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-636">
@@ -1379,9 +1432,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="-457">
           <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/api/v1/article.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

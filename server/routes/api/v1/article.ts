@@ -4,8 +4,8 @@ import { ArticleController } from '../../../controllers/ArticleController';
 const article = express.Router();
 
 article.get('/', (req, res, next) => {
-    const articleController = new ArticleController();
-    articleController.index(req, res, next);
+  const articleController = new ArticleController();
+  articleController.index(req, res, next);
 });
 
 article.put('/', (req, res, next) => {
