@@ -1,9 +1,7 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as toastr from 'toastr';
 import { ProcessingModalAction } from '../actions/ProcessingModalAction';
-import { AppStore } from '../common/AppStore';
-import { AppState } from '../models/AppState';
 import { RegisteredArticle } from '../models/RegisteredArticle';
 import { ArticleService } from '../services/ArticleService';
 

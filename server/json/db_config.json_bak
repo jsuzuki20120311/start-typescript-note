@@ -1,0 +1,7 @@
+{
+  "host": "jotdowndb.cz84urpenvm9.us-west-2.rds.amazonaws.com",
+  "port": 3306,
+  "user": "gonzo",
+  "password": "hijikata",
+  "database": "jotdowndb"
+}

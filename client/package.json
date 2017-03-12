@@ -2,9 +2,11 @@
   "name": "sample-crud-application-client",
   "version": "1.0.0",
   "scripts": {
-    "build": "NODE_ENV=development rimraf ../server/public && webpack --progress --colors --config webpack.config.dev.js",
-    "watch": "NODE_ENV=development webpack --progress --colors --watch --config webpack.config.dev.js",
-    "build:prod": " NODE_ENV=production rimraf ../server/public && webpack --progress --colors --config webpack.config.prod.js"
+    "build": "rimraf ../server/public && webpack --progress --colors --config webpack.config.dev.js",
+    "build:prod": "NODE_ENV=production rimraf ../server/public && webpack --progress --colors --config webpack.config.dev.js",
+    "build-aot": "rimraf ../server/public && webpack --progress --colors --config webpack.config.aot.js",
+    "build-aot:prod": "NODE_ENV=production rimraf ../server/public && webpack --progress --colors --config webpack.config.aot.js",
+    "watch": "webpack --progress --colors --watch --config webpack.config.dev.js"
   },
   "license": "MIT",
   "dependencies": {

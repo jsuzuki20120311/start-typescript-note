@@ -5,7 +5,7 @@ var helpers = require('./helpers');
 module.exports = {
   devtool: 'source-map',
   entry: {
-    app: './app/app.ts',
+    app: process.env.NODE_ENV === 'production' ? './app/product-app.ts' : './app/app.ts',
     vendor: './app/vendor.ts'
   },
   module: {

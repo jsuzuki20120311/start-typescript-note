@@ -18,6 +18,14 @@
             "name": "プロセスに添付",
             "port": 5858,
             "outFiles": []
+        },
+        {
+            "name": "Launch remote website with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000/",
+            "webRoot": "${workspaceRoot}/server/",
+            "sourceMaps": true
         }
     ]
 }
