@@ -6,7 +6,7 @@
     "build:prod": "NODE_ENV=production rimraf ../server/public && webpack --progress --colors --config webpack.config.dev.js",
     "build-aot": "rimraf ../server/public && webpack --progress --colors --config webpack.config.aot.js",
     "build-aot:prod": "NODE_ENV=production rimraf ../server/public && webpack --progress --colors --config webpack.config.aot.js",
-    "watch": "webpack --progress --colors --watch --config webpack.config.dev.js"
+    "dev": "webpack --progress --colors --watch --config webpack.config.dev.js"
   },
   "license": "MIT",
   "dependencies": {
