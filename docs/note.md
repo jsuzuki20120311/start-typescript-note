@@ -1,7 +1,7 @@
 # TypeScript + express + Angular2 でつくるシングルページアプリケーション
 
 
-![こんにちは、TypeScript](./image/konnitihaTypeScript.png "画像タイトル")
+![こんにちは、TypeScript](../image/konnitihaTypeScript.png "画像タイトル")
 
 
 
@@ -104,7 +104,7 @@ TypeScriptを使用する場合、プログラマはTypeScriptでコードを記
 
 ## 開発環境の準備
 
-![開発環境のセットアップをしましょう](./image/slide2.png "画像タイトル")
+![開発環境のセットアップをしましょう](../image/slide2.png "画像タイトル")
 
 
 ### Node.jsのダウンロード
@@ -139,12 +139,12 @@ $ tsc -v
 
 これでTypeScriptで記述したファイルをJavaScriptにトランスパイルするこができるようになりました。
 
-![型のある世界にようこそ](./image/slide4.png "画像タイトル")
+![型のある世界にようこそ](../image/slide4.png "画像タイトル")
 
 
 ## Hello World
 
-![こんにちは、せかい](./image/slide3.png "画像タイトル")
+![こんにちは、せかい](../image/slide3.png "画像タイトル")
 
 開発環境の準備ができたので、ごく簡単なプログラムを作成して開発環境がちゃんとできているか確認します。
 
@@ -204,9 +204,9 @@ Visual Studio Codeにはタスクランナーという機能があるので、�
 
 Command + Shift + P キーを押してコマンドパレットを表示し、tasks と入力して「タスクランナーの構成」を選びます。
 
-![visual-studio-code-capture](./image/20160926010902.png "画像タイトル")
+![visual-studio-code-capture](../image/20160926010902.png "画像タイトル")
 
-![visual-studio-code-capture](./image/20160926010917.png "画像タイトル")
+![visual-studio-code-capture](../image/20160926010917.png "画像タイトル")
 
 選択後、.vscode フォルダの下に task.json ができていることを確認します。
 
@@ -227,11 +227,11 @@ $ npm install typescript --save-dev
 
 「基本設定」→「ワークスペースの設定」
 
-![visual-studio-code-capture](./image/20160926005606.png "画像タイトル")
+![visual-studio-code-capture](../image/20160926005606.png "画像タイトル")
 
 画面右側に、使用するTypeScriptのパスを設定します。
 
-![visual-studio-code-capture](./image/20160926005842.png "画像タイトル")
+![visual-studio-code-capture](../image/20160926005842.png "画像タイトル")
 
 
 #### TypeScriptで書く
@@ -265,11 +265,11 @@ hoge.sayHello();
 Visual Studio Codeではデバッグ設定を行うと、エディタ内でデバッグを行えます。
 設定をするには　F5 キーを押し、Node.jsを選択します。
 
-![visual-studio-code-capture](./image/2016-10-10 17.52.59.png "画像タイトル")
+![visual-studio-code-capture](../image/2016-10-10%2017.52.59.png "画像タイトル")
 
 launch.json が開いたら、program属性の値(画像だと8行目)を実行するJavaScriptファイルに指定しなおします。
 
-![visual-studio-code-capture](./image/2016-10-10 18.03.31.png "画像タイトル")
+![visual-studio-code-capture](../image/2016-10-10%2018.03.31.png "画像タイトル")
 
 今回の場合
 
@@ -288,7 +288,7 @@ Visual Studo Codeで実行するにはエディタ画面左側の虫アイコン
 
 ソースコードに間違いがなく、設定が間違っていないなら、デバッグコンソールに 「Hello World」が出力されるはずです。
 
-![visual-studio-code-capture](./image/2016-10-10 19.05.22.png "画像タイトル")
+![visual-studio-code-capture](../image/2016-10-10%2019.05.22.png "画像タイトル")
 
 
 ## TypeScriptの要素
