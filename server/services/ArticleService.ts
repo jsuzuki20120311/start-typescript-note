@@ -30,7 +30,7 @@ export class ArticleService {
   }
 
   /**
-   * 
+   * 第一引数と第二引数で指定された登録済記事データを取得します。
    * @param {number} offset 
    * @param {number} limit 
    * @returns {Promise<RegisteredArticle[]>} 
