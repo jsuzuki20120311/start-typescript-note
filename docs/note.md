@@ -1,118 +1,10 @@
 # TypeScript + express + Angular2 でつくるシングルページアプリケーション
 
 
-![こんにちは、TypeScript](../image/konnitihaTypeScript.png "画像タイトル")
 
 
 
-**さあTypeScriptを始めましょう**
-
-
-## もくじ
-
- * TypeScriptとは
-
- * 開発環境の準備
-
- * Hello World
-
- * TypeScriptの要素について
-
-   - 型アノテーション
-
-   - インタフェース
-
-   - アクセス修飾子
-
-   - 構造的部分型
-
-   - async await
-
- * ライブラリと型定義のインストール
-   
-   - ライブラリのインストール
- 
-   - 型定義のインストール
-
- * CRUDアプリケーションの作成
-   
-  - 要件
-  
-  - ディレクトリ構成
-
-  - データベースについて
-  
-  - MySQLのインストール
-
-
- * バックエンドの環境構築
-
-  - Expressについて
-
-  - Expressのインストール
-
-  - Expressの型定義ファイルのインストール
-
-  - 静的ファイルへのルーティング
-  
-  - エラーページへのルーティング
-  
-  - APIへのルーティング
-
-  - モデルクラスの作成
-
-  - コントローラの作成
-  
-  - サービスクラスの作成
-  
-  - DAOクラスの作成
-
-
- * フロントエンド開発の環境構築
-
-  - Angular2 について
-   
-  - RxJSについて
-
-  - Webpackの設定
-
-  - package.jsonの設定
-
-  - 設定クラスの作成
-
-  - コンポーネントの作成
-
-  - ディスパッチャの作成
-
-  - 非同期通信処理
-
-
- * 参考文献
-
-
-
-
-
-## TypeScriptとは
-
-TypeScriptとは、Microsoftが開発した静的型付けAltJS(Altnative Javascript)です。
-
-AltJSとはJavaScriptを生成するための言語です。TypeScript以外のAltJSにはCoffeeScriptやDartなどが存在します。
-
-TypeScriptを使用する場合、プログラマはTypeScriptでコードを記述し、そのコードをJavaScriptにトランスパイルし、トランスパイル後のJavaScriptが実行されます。
-
-
-## 開発環境の準備
-
-![開発環境のセットアップをしましょう](../image/slide2.png "画像タイトル")
-
-
-### Node.jsのダウンロード
-
-Node.jsをインストールされていない場合、以下のURLからダウンロードしインストールします。
-
-[Node.js](https://nodejs.org/en/)
-
+## 開発環境
 
 ### Visual Studio Codeのダウンロード
 
@@ -139,12 +31,9 @@ $ tsc -v
 
 これでTypeScriptで記述したファイルをJavaScriptにトランスパイルするこができるようになりました。
 
-![型のある世界にようこそ](../image/slide4.png "画像タイトル")
 
 
 ## Hello World
-
-![こんにちは、せかい](../image/slide3.png "画像タイトル")
 
 開発環境の準備ができたので、ごく簡単なプログラムを作成して開発環境がちゃんとできているか確認します。
 

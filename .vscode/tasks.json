@@ -13,12 +13,12 @@
             "args": ["npm -prefix ./client run build && npm -prefix ./server run build;"]
         },
         {
-            "taskName": "watch",
-            "args": ["npm -prefix ./client run watch & npm -prefix ./server run dev;"]
+            "taskName": "build:product",
+            "args": ["npm -prefix ./client run build-product && npm -prefix ./server run build;"]
         },
         {
-            "taskName": "build-product",
-            "args": ["npm -prefix ./client run build-product && npm -prefix ./server run build;"]
+            "taskName": "dev",
+            "args": ["npm -prefix ./client run dev & npm -prefix ./server run dev;"]
         }
     ]
 }
