@@ -1,7 +1,3 @@
-# start-typescript-note
+# TypeScript + Angular2 + Express でつくるシングルページアプリケーション
 
-## Abstract
-
-TypeScriptの導入手順とTypeScriptの要素解説
-
-[読む](./docs/note.md)
+[もくじ](./docs/index.md)

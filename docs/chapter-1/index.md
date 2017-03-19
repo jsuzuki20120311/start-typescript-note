@@ -16,6 +16,24 @@
 
 Node.jsは更新頻度が高いと言われており、
 
+```
+$ curl -L git.io/nodebrew | perl - setup
+```
+
+.bashrcを編集します。
+
+
+
+## 環境変数の設定
+
+前節ですでにnodeとnpmのバージョンが確認できた場合、ここでの手順は不要になります。
+
+```.bash_profile
+
+```
+
+
+
 
 ## Node.jsのインストール
 
@@ -32,13 +50,11 @@ $ node --version
 
 ## TypeScriptのインストール
 
-次にTypeScriptをインストールします。
+次にTypeScriptをインストールします。TypeScriptのインストールにはnpmコマンドを使用します。
 
 ```shell
 $ npm install typescript -global
 ```
-
--global オプションを指定しインストールすることで、
 
 
 ## 開発環境について

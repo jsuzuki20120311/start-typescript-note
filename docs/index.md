@@ -1,9 +1,8 @@
 ## もくじ
 
-  * 1章 
+  * [1章 開発環境の準備](./chapter-1/index.md)
 
-
-  * 2章 Hello World
+  * [2章 Hello World](./chapter-2/index.md)
 
   * 3章 TypeScript
 
@@ -16,8 +15,6 @@
    - 構造的部分型
 
    - async await
-
-
 
   * 4章 
 

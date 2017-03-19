@@ -10,8 +10,7 @@
 
 3章では TypeScript の代表的な機能を、JavaScript
 
-
-## TypeScriptとは
+TypeScriptはEcmaScript2015のスーパーセットです。
 
 TypeScriptとは、Microsoftが開発した静的型付けAltJS(Altnative Javascript)です。
 
@@ -21,6 +20,23 @@ AltJSとはJavaScriptを生成するための言語です。TypeScript以外のA
 
 TypeScriptを使用する場合、プログラマはTypeScriptでコードを記述し、
 そのコードをJavaScriptにトランスパイルし、トランスパイル後のJavaScriptが実行されます。
+
+また、本章ではTypeScriptの
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
