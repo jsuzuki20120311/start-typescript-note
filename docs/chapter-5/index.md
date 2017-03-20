@@ -10,7 +10,6 @@ Visual Studioと異なり、Visual Studio CodeはWindows版だけでなくMac版
 [Visual Studio Code](http://code.visualstudio.com/)
 
 
-
 ### Visual Studio Codeの設定
 
 #### トランスパイルタスクの設定

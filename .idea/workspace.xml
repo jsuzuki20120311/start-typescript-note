@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4e6998e-7e5a-49e8-864f-8b73d66cec12" name="Default" comment="commit.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/chapter-4/section2-2.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/note.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/Config.ts" afterPath="$PROJECT_DIR$/client/app/Config.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/chapter-1/index.md" afterPath="$PROJECT_DIR$/docs/chapter-1/index.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/chapter-4/index.md" afterPath="$PROJECT_DIR$/docs/chapter-4/index.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/chapter-4/section1.md" afterPath="$PROJECT_DIR$/docs/chapter-4/section1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/chapter-4/section2.md" afterPath="$PROJECT_DIR$/docs/chapter-4/section2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/cover_description.md" afterPath="$PROJECT_DIR$/docs/cover_description.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.md" afterPath="$PROJECT_DIR$/docs/index.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/author.md" afterPath="$PROJECT_DIR$/docs/author.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/chapter-5/index.md" afterPath="$PROJECT_DIR$/docs/chapter-5/index.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,19 +55,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/chapter-1/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="315">
-                <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="section1.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/chapter-4/section1.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -132,12 +113,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="720">
-                <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+              <first_editor relative-caret-position="15">
+                <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="author.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/author.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="135">
+                <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -170,6 +164,19 @@
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="315">
                 <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/chapter-5/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="270">
+                <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -237,7 +244,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/app/components/update-article.component.html" />
         <option value="$PROJECT_DIR$/client/app/components/view-article.component.html" />
         <option value="$PROJECT_DIR$/client/app/components/app.component.html" />
         <option value="$PROJECT_DIR$/server/controllers/ArticleController.ts" />
@@ -270,7 +276,6 @@
         <option value="$PROJECT_DIR$/docs/maegaki.md" />
         <option value="$PROJECT_DIR$/docs/chapter-3/section5.md" />
         <option value="$PROJECT_DIR$/docs/chapter-3/index.md" />
-        <option value="$PROJECT_DIR$/docs/chapter-5/index.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/client/app/aot-app.ts" />
         <option value="$PROJECT_DIR$/client/app/product-aot-app.ts" />
@@ -288,6 +293,8 @@
         <option value="$PROJECT_DIR$/docs/note.md" />
         <option value="$PROJECT_DIR$/docs/cover_description.md" />
         <option value="$PROJECT_DIR$/docs/index.md" />
+        <option value="$PROJECT_DIR$/docs/chapter-5/index.md" />
+        <option value="$PROJECT_DIR$/docs/author.md" />
       </list>
     </option>
   </component>
@@ -363,16 +370,6 @@
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="start-typescript-note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="start-typescript-note" />
@@ -913,7 +910,7 @@
       <workItem from="1489902759888" duration="115000" />
       <workItem from="1489903121467" duration="6010000" />
       <workItem from="1489927097345" duration="923000" />
-      <workItem from="1489971834377" duration="10536000" />
+      <workItem from="1489971834377" duration="11614000" />
     </task>
     <task id="LOCAL-00001" summary="GIT管理から漏れていたWebpack設定ファイルを追加。">
       <created>1486871456900</created>
@@ -1076,11 +1073,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489977341199</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ドキュメント追記。">
+      <created>1489983158983</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1489983158983</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97298000" />
+    <option name="totallyTimeSpent" value="98376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1181,7 +1185,8 @@
     <MESSAGE value="commit." />
     <MESSAGE value="AOTビルドでエラーが発生していた問題を修正するために、不要なファイルを削除。" />
     <MESSAGE value="追記。" />
-    <option name="LAST_COMMIT_MESSAGE" value="追記。" />
+    <MESSAGE value="ドキュメント追記。" />
+    <option name="LAST_COMMIT_MESSAGE" value="ドキュメント追記。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1249,16 +1254,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="360">
             <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/author.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           </first_editor>
           <second_editor />
         </state>
@@ -1344,17 +1339,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="690">
             <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/chapter-5/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1696,8 +1680,30 @@
     <entry file="file://$PROJECT_DIR$/docs/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="720">
-            <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/chapter-5/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/author.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             <folding />
           </first_editor>
           <second_editor />
