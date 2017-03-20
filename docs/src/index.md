@@ -1,8 +1,8 @@
 ## もくじ
 
-  * [1章 開発環境の準備](./chapter-1/index.md)
+  * [1章 開発環境の準備](chapter-1/index.md)
 
-  * [2章 Hello World](./chapter-2/index.md)
+  * [2章 Hello World](chapter-2/index.md)
 
   * 3章 TypeScript
 

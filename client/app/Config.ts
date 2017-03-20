@@ -8,7 +8,7 @@ export class Config {
   /**
    * 本番環境用APIのURL
    */
-  private static readonly PRODUCT_API_ROOT_URL = 'http://';
+  private static readonly PRODUCT_API_ROOT_URL = 'http://localhost:3000/api/v1/';
 
   /**
    * 開発環境用APIのURL
