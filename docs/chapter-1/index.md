@@ -56,6 +56,17 @@ $ node --version
 $ npm install typescript -global
 ```
 
+以下のコマンドで、バージョンが表示されたるかどうか確認しましょう。
+
+```
+$ tsc -v
+```
+
+これでTypeScriptで記述したファイルをJavaScriptにトランスパイルするこができるようになりました。
+
+
+
+
 
 ## 開発環境について
 

@@ -19,6 +19,3 @@
 ## CRUDとは
 CREATE、READ、UPDATE、DELETEの頭文字をとった略語です。
 </div>
-
-
-

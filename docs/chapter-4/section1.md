@@ -5,11 +5,74 @@
 
 レスポンスで返すデータ形式はjsonで統一します。
 
-コントローラクラス
+* コントローラクラス
+　
+* サービスクラス
 
-サービスクラス
+* DAOクラス
+
+実処理
+
+リクエストを
+
+データベースへのデータの登録、検索、更新、削除処理を行うクラス。
+
+の３層の構成で作っていきます。
+
+
+
+### package.jsonの作成
+
+まずは package.json を作成します。
+
+```shell
+$ npm init -y
+```
+
+実行後、プロジェクトディレクトリに package.json ができていることを確認しましょう。
+
+
+### tsconfig.jsonの作成
+
+まず、tsconfig.jsonという名前のファイルをserverディレクトリに作成します。
+これはトランスパイルする際のオプションなどを設定するファイルです。
+
+```json
+
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "alwaysStrict": true
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+```
+
+
+### DAOクラス
+
 
 DAOクラス
+
+
+
+
+
 
 の３層
 
@@ -180,3 +243,4 @@ npmとはなんでしょうか？
 ### 一覧取得API
 
 
+### まとめ
