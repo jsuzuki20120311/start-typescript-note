@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4e6998e-7e5a-49e8-864f-8b73d66cec12" name="Default" comment="commit.">
+    <list default="true" id="e4e6998e-7e5a-49e8-864f-8b73d66cec12" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/2016-10-10 17.52.59.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/2016-10-10 18.03.31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/2016-10-10 19.05.22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/2016-10-11 1.35.02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/20160926005606.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/20160926005842.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/20160926010902.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/20160926010917.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教.pptx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教/TypeScript布教/スライド1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教/TypeScript布教/スライド2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教/TypeScript布教/スライド3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教/TypeScript布教/スライド4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教/TypeScript布教/スライド1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教/TypeScript布教/スライド2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教/TypeScript布教/スライド3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/TypeScript布教/TypeScript布教/スライド4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/konnitihaTypeScript.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/slide2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/slide3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/slide4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/スライド1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/スライド1.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/ArticleService.ts" afterPath="$PROJECT_DIR$/client/app/services/ArticleService.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/api/v1/article.ts" afterPath="$PROJECT_DIR$/server/routes/api/v1/article.ts" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,7 +78,7 @@
       <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/api/v1/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="45">
               <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -91,8 +112,8 @@
       <file leaf-file-name="article.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/api/v1/article.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -100,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleService.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ArticleService.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/app/services/ArticleService.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="3" />
+            <state relative-caret-position="184">
+              <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="50" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -116,18 +137,30 @@
         <entry file="file://$PROJECT_DIR$/client/app/components/article-list.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article-list.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="article-list.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/components/article-list.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+            <state relative-caret-position="405">
+              <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/components/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#73#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -180,7 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/server/controllers/ArticleController.ts" />
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/note.md" />
         <option value="$PROJECT_DIR$/client/app/Routes.ts" />
@@ -231,6 +263,7 @@
         <option value="$PROJECT_DIR$/docs/src/index.md" />
         <option value="$PROJECT_DIR$/client/app/services/ArticleService.ts" />
         <option value="$PROJECT_DIR$/server/routes/api/v1/article.ts" />
+        <option value="$PROJECT_DIR$/client/app/components/app.component.ts" />
       </list>
     </option>
   </component>
@@ -345,28 +378,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="start-typescript-note" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="v1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -743,6 +754,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -942,7 +960,8 @@
       <workItem from="1489971834377" duration="16974000" />
       <workItem from="1490077538226" duration="296000" />
       <workItem from="1490078309159" duration="261000" />
-      <workItem from="1490399164967" duration="1727000" />
+      <workItem from="1490399164967" duration="6406000" />
+      <workItem from="1490416796006" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="GIT管理から漏れていたWebpack設定ファイルを追加。">
       <created>1486871456900</created>
@@ -1126,11 +1145,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489997568715</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="APIのURLに拡張子を付加">
+      <created>1490401159516</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1490401159516</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106020000" />
+    <option name="totallyTimeSpent" value="110709000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1153,14 +1179,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32527474" sideWeight="0.50532484" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865584" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37802908" sideWeight="0.500821" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21486267" sideWeight="0.4250412" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37802908" sideWeight="0.49423394" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21486267" sideWeight="0.4332784" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21486267" sideWeight="0.4250412" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33497536" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21486267" sideWeight="0.5749588" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2180937" sideWeight="0.56672156" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2358643" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.4955414" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24938574" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1171,6 +1196,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33497536" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1232,7 +1258,8 @@
     <MESSAGE value="追記。" />
     <MESSAGE value="ドキュメント追記。" />
     <MESSAGE value="commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="commit." />
+    <MESSAGE value="APIのURLに拡張子を付加" />
+    <option name="LAST_COMMIT_MESSAGE" value="APIのURLに拡張子を付加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1245,16 +1272,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-2/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="240">
-            <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/src/chapter-3/section3.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1483,7 +1500,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="120">
             <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1494,7 +1510,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="30">
             <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1505,7 +1520,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1513,7 +1527,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/api/v1/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="45">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -1541,20 +1555,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/api/v1/article.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/services/ArticleService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1562,16 +1566,36 @@
     <entry file="file://$PROJECT_DIR$/client/app/components/article-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/components/article-list.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        <state relative-caret-position="405">
+          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/services/ArticleService.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
