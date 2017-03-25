@@ -27,7 +27,7 @@ export class ArticleService {
   findArticleById(id: number): Rx.Observable<any> {
     const headers = new Headers({ 'x-requested-with': 'XMLHttpRequest' });
     const requestOptions = new RequestOptions({ headers: headers });
-    const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
+    const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}.json`;
     return this.http.get(encodeURI(url), requestOptions)
       .map(this.extractData)
       .catch(this.handleError);
@@ -36,7 +36,7 @@ export class ArticleService {
   findAllArticles(): Rx.Observable<any> {
     const headers = new Headers({ 'x-requested-with': 'XMLHttpRequest' });
     const requestOptions = new RequestOptions({ headers: headers });
-    const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/all`;
+    const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/all.json`;
     return this.http.get(encodeURI(url), requestOptions)
       .map(this.extractData)
       .catch(this.handleError);
@@ -55,7 +55,7 @@ export class ArticleService {
   }
 
   update(id: number, article: Article): Rx.Observable<any> {
-    const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
+    const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}.json`;
     const sendData = JSON.stringify(article);
     const headers = new Headers({
       'x-requested-with': 'XMLHttpRequest',
@@ -70,7 +70,7 @@ export class ArticleService {
   delete(id: number): Rx.Observable<any> {
     const headers = new Headers({ 'x-requested-with': 'XMLHttpRequest' });
     const requestOptions = new RequestOptions({ headers: headers });
-    const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}`;
+    const url = `${Config.getInstance().getApiRoot()}${ArticleService.API}/${id}.json`;
     return this.http.delete(encodeURI(url), requestOptions)
       .map(this.extractData)
       .catch(this.handleError);

@@ -13,27 +13,27 @@ article.put('/', (req, res, next) => {
   articleController.create(req, res, next);
 });
 
-article.get('/all', (req, res, next) => {
+article.get('/all.json', (req, res, next) => {
   const articleController = new ArticleController();
   articleController.all(req, res, next);
 });
 
-article.get('/count', (req, res, next) => {
+article.get('/count.json', (req, res, next) => {
   const articleController = new ArticleController();
   articleController.count(req, res, next);
 });
 
-article.get('/:id', (req, res, next) => {
+article.get('/:id\.json', (req, res, next) => {
   const articleController = new ArticleController();
   articleController.read(req, res, next);
 });
 
-article.post('/:id', (req, res, next) => {
+article.post('/:id\.json', (req, res, next) => {
   const articleController = new ArticleController();
   articleController.update(req, res, next);
 });
 
-article.delete('/:id', (req, res, next) => {
+article.delete('/:id\.json', (req, res, next) => {
   const articleController = new ArticleController();
   articleController.delete(req, res, next);
 });
