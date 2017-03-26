@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="sample_crud_app_db@localhost" uuid="3fd6a624-b158-4f61-a5ef-51ef1a3b2a6a">
+      <database-info product="MySQL" version="5.7.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:sample_crud_app_db</introspection-schemas>
+      <resolve-scope>sample_crud_app_db:</resolve-scope>
+      <unqualified-resolve-schemas>sample_crud_app_db:</unqualified-resolve-schemas>
+    </data-source>
+  </component>
+</project>
