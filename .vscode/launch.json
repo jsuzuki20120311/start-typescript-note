@@ -7,15 +7,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "プログラムの起動",
+            "name": "Launch server",
             "program": "${workspaceRoot}/server/www/index.js",
             "cwd": "${workspaceRoot}/server",
             "outFiles": []
         },
         {
-            "name": "Launch remote website with sourcemaps",
             "type": "chrome",
             "request": "launch",
+            "name": "Launch remote website with sourcemaps",
             "url": "http://localhost:3000/",
             "webRoot": "${workspaceRoot}/server/public/",
             "sourceMaps": true,

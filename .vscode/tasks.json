@@ -10,15 +10,15 @@
     "tasks": [
         {
             "taskName": "build",
-            "args": ["npm -prefix ./client run build && npm -prefix ./server run build;"]
+            "args": ["npm -prefix ./chapter-4/client run build && npm -prefix ./chapter-4/server run build;"]
         },
         {
             "taskName": "build:product",
-            "args": ["npm -prefix ./client run build-product && npm -prefix ./server run build;"]
+            "args": ["npm -prefix ./chapter-4/client run build-product && npm -prefix ./chapter-4/server run build;"]
         },
         {
             "taskName": "dev",
-            "args": ["npm -prefix ./client run dev & npm -prefix ./server run dev;"]
+            "args": ["npm -prefix ./chapter-4/client run dev & npm -prefix ./chapter-4/server run dev;"]
         }
     ]
 }

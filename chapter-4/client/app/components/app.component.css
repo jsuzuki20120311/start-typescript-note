@@ -1,0 +1,24 @@
+.loading-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loading {
+  position: relative;
+  pointer-events:none;
+  text-align:center;
+  margin: 0 auto;
+  top: calc(50vh - 15px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #2c2c2c;
+  border-right-color: transparent;
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -ms-animation: spin 1s infinite linear;
+}

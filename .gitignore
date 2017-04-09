@@ -5,7 +5,7 @@ node_modules
 *.js
 
 db_config.json
-server/public/
+chapter-4/server/public/
 
 !helpers.js
 !webpack.config.dev.js

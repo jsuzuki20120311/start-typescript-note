@@ -49,7 +49,7 @@ export class ArticleService {
       'Content-Type': 'application/json'
     });
     const requestOptions = new RequestOptions({ headers: headers });
-    return this.http.put(encodeURI(`${Config.getInstance().getApiRoot()}${ArticleService.API}`), sendData, requestOptions)
+    return this.http.post(encodeURI(`${Config.getInstance().getApiRoot()}${ArticleService.API}`), sendData, requestOptions)
       .map(this.extractData)
       .catch(this.handleError);
   }
@@ -62,7 +62,7 @@ export class ArticleService {
       'Content-Type': 'application/json'
     });
     const requestOptions = new RequestOptions({ headers: headers });
-    return this.http.post(encodeURI(url), sendData, requestOptions)
+    return this.http.put(encodeURI(url), sendData, requestOptions)
       .map(this.extractData)
       .catch(this.handleError);
   }

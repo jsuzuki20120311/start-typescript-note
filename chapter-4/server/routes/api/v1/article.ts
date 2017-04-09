@@ -8,7 +8,7 @@ article.get('/', (req, res, next) => {
   articleController.index(req, res, next);
 });
 
-article.put('/', (req, res, next) => {
+article.post('/', (req, res, next) => {
   const articleController = new ArticleController();
   articleController.create(req, res, next);
 });
@@ -28,7 +28,7 @@ article.get('/:id\.json', (req, res, next) => {
   articleController.read(req, res, next);
 });
 
-article.post('/:id\.json', (req, res, next) => {
+article.put('/:id\.json', (req, res, next) => {
   const articleController = new ArticleController();
   articleController.update(req, res, next);
 });
