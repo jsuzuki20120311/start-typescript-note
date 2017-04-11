@@ -19,12 +19,12 @@
 
 ## 第2章用ソースコード
 
-[第二章のソースコード](https://github.com/jsuzuki20120311/start-typescript-note/tree/master/chapter-2)
+[第2章のソースコード](https://github.com/jsuzuki20120311/start-typescript-note/tree/master/chapter-2)
 
 
 ## 第4章用ソースコード
 
-[第四章のソースコード](https://github.com/jsuzuki20120311/start-typescript-note/tree/master/chapter-4)
+[第4章のソースコード](https://github.com/jsuzuki20120311/start-typescript-note/tree/master/chapter-4)
 
 ### 第4章のソースコードの動かし方
 
@@ -62,7 +62,7 @@ $ npm install
 ```
 
 
-### 4.3 サーバーサイドビルド
+#### 4.3 サーバーサイドビルド
 
 
 ```shell
@@ -77,7 +77,7 @@ $ npm run build
 
 ```
 
-### 4.4 フロントエンドのビルド
+#### 4.4 フロントエンドのビルド
 
 
 ```shell
@@ -102,7 +102,7 @@ $ npm start
 ```
 
 
-#### 4.5 確認
+#### 4.6 確認
 
 以下のURLをブラウザで開きます。
 
