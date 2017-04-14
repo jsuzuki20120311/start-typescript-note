@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4e6998e-7e5a-49e8-864f-8b73d66cec12" name="Default" comment="不要なファイルを削除。">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chapter-4/server/npm-debug.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chapter-4/client/client.iml" afterPath="$PROJECT_DIR$/chapter-4/client/client.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chapter-4/server/server.iml" afterPath="$PROJECT_DIR$/chapter-4/server/server.iml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,7 +62,28 @@
     <favorites_list name="start-typescript-note" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="db_config.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chapter-4/server/json/db_config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_config.json_bak" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chapter-4/server/json/db_config.json_bak">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -104,9 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/note.md" />
-        <option value="$PROJECT_DIR$/client/app/Routes.ts" />
-        <option value="$PROJECT_DIR$/client/app/vendor.ts" />
         <option value="$PROJECT_DIR$/client/app/app.module.ts" />
         <option value="$PROJECT_DIR$/client/app/components/view-article.component.ts" />
         <option value="$PROJECT_DIR$/client/webpack.config.prod.js" />
@@ -149,12 +173,15 @@
         <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/docs/chapter-5/index.md" />
         <option value="$PROJECT_DIR$/docs/author.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/docs/src/index.md" />
         <option value="$PROJECT_DIR$/client/app/services/ArticleService.ts" />
         <option value="$PROJECT_DIR$/server/routes/api/v1/article.ts" />
         <option value="$PROJECT_DIR$/client/app/components/app.component.ts" />
         <option value="dbtable:/78fb6d2e/3fd6a624-b158-4f61-a5ef-51ef1a3b2a6a/sample_crud_app_db.article" />
+        <option value="$PROJECT_DIR$/chapter-4/client/webpack.config.aot.js" />
+        <option value="$PROJECT_DIR$/chapter-4/client/webpack.config.dev.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/chapter-4/server/json/db_config.json" />
       </list>
     </option>
   </component>
@@ -174,12 +201,11 @@
     <treeState />
   </component>
   <component name="NamedScopeManager">
-    <scope name="server" pattern="file[server]:*/" />
+    <scope name="server" pattern="src[chapter-4-server]:*..*" />
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/client/node_modules" />
-    <handled-path value="$PROJECT_DIR$/docs/node_modules" />
-    <handled-path value="$PROJECT_DIR$/server/node_modules" />
+    <handled-path value="$PROJECT_DIR$/chapter-4/client/node_modules" />
+    <handled-path value="$PROJECT_DIR$/chapter-4/server/node_modules" />
   </component>
   <component name="PhpServers">
     <servers />
@@ -188,7 +214,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="516" />
+    <option name="height" value="701" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -229,8 +255,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,7 +265,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -249,11 +275,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="json" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,9 +293,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="SearchEverywhereHistoryKey" value="app.ts&#9;FILE&#9;file:///home/jun/src/github.com/jsuzuki20120311/start-typescript-note/code/server/app.ts" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nodebrew/current/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nodebrew/current/bin/node" />
@@ -302,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.server dev">
+  <component name="RunManager" selected="Node.js.start server">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -626,6 +652,9 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -690,15 +719,8 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="server start" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="www/index.js" working-dir="$PROJECT_DIR$/server">
-      <profiling v8-profiler-path="" />
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
-        <profiling v8-profiler-path="" />
-      </EXTENSION>
-      <method />
-    </configuration>
     <configuration default="false" name="server dev" type="js.build_tools.npm" factoryName="npm">
-      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <package-json value="$PROJECT_DIR$/chapter-4/server/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -708,7 +730,7 @@
       <method />
     </configuration>
     <configuration default="false" name="client dev" type="js.build_tools.npm" factoryName="npm">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <package-json value="$PROJECT_DIR$/chapter-4/client/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -718,7 +740,7 @@
       <method />
     </configuration>
     <configuration default="false" name="client build-aot" type="js.build_tools.npm" factoryName="npm">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <package-json value="$PROJECT_DIR$/chapter-4/client/package.json" />
       <command value="run" />
       <scripts>
         <script value="build-aot" />
@@ -728,7 +750,7 @@
       <method />
     </configuration>
     <configuration default="false" name="client build-aot:prod" type="js.build_tools.npm" factoryName="npm">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <package-json value="$PROJECT_DIR$/chapter-4/client/package.json" />
       <command value="run" />
       <scripts>
         <script value="build-aot:prod" />
@@ -737,11 +759,15 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <configuration default="false" name="start server" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="www/index.js" working-dir="$PROJECT_DIR$/chapter-4/server">
+      <method />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="npm.server dev" />
       <item index="1" class="java.lang.String" itemvalue="npm.client dev" />
       <item index="2" class="java.lang.String" itemvalue="npm.client build-aot" />
       <item index="3" class="java.lang.String" itemvalue="npm.client build-aot:prod" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.start server" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -799,6 +825,9 @@
       <workItem from="1490500266441" duration="379000" />
       <workItem from="1491014154896" duration="1253000" />
       <workItem from="1491734190976" duration="128000" />
+      <workItem from="1491796108398" duration="2426000" />
+      <workItem from="1492178648404" duration="404000" />
+      <workItem from="1492179158156" duration="442000" />
     </task>
     <task id="LOCAL-00001" summary="GIT管理から漏れていたWebpack設定ファイルを追加。">
       <created>1486871456900</created>
@@ -1007,7 +1036,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113016000" />
+    <option name="totallyTimeSpent" value="119650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1019,7 +1048,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="516" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="701" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38091603" sideWeight="0.52415025" order="11" side_tool="true" content_ui="tabs" />
@@ -1029,15 +1059,15 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32527474" sideWeight="0.50532484" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865584" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21324718" sideWeight="0.49423394" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21486267" sideWeight="0.4332784" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21265636" sideWeight="0.49423394" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44749597" sideWeight="0.4449918" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21486267" sideWeight="0.4250412" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34491116" sideWeight="0.44170773" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33497536" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3338633" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26332796" sideWeight="0.56672156" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2358643" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44749597" sideWeight="0.55500823" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15105008" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.4955414" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24938574" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1049,6 +1079,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38897893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1058,72 +1090,34 @@
     <option name="processedProjectFiles" value="true" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/server/services/ArticleService.js" />
-        <option value="$PROJECT_DIR$/server/services/ArticleService.js.map" />
-        <option value="$PROJECT_DIR$/server/models/RegisteredArticle.js.map" />
-        <option value="$PROJECT_DIR$/server/models/AppError.js.map" />
-        <option value="$PROJECT_DIR$/server/models/Article.js" />
-        <option value="$PROJECT_DIR$/server/models/RegisteredItem.js" />
-        <option value="$PROJECT_DIR$/server/models/RegisteredItem.js.map" />
-        <option value="$PROJECT_DIR$/server/models/AppError.js" />
-        <option value="$PROJECT_DIR$/server/models/Article.js.map" />
-        <option value="$PROJECT_DIR$/server/models/RegisteredArticle.js" />
-        <option value="$PROJECT_DIR$/server/routes/index.js.map" />
-        <option value="$PROJECT_DIR$/server/routes/index.js" />
-        <option value="$PROJECT_DIR$/server/routes/api/index.js.map" />
-        <option value="$PROJECT_DIR$/server/routes/api/index.js" />
-        <option value="$PROJECT_DIR$/server/routes/api/v1/index.js" />
-        <option value="$PROJECT_DIR$/server/routes/api/v1/article.js.map" />
-        <option value="$PROJECT_DIR$/server/routes/api/v1/article.js" />
-        <option value="$PROJECT_DIR$/server/routes/api/v1/index.js.map" />
-        <option value="$PROJECT_DIR$/server/dao/ArticleDao.js.map" />
-        <option value="$PROJECT_DIR$/server/dao/ArticleDao.js" />
-        <option value="$PROJECT_DIR$/server/app.js.map" />
-        <option value="$PROJECT_DIR$/server/app.js" />
-        <option value="$PROJECT_DIR$/server/www/index.js" />
-        <option value="$PROJECT_DIR$/server/www/index.js.map" />
-        <option value="$PROJECT_DIR$/server/config/DbConfigManager.js.map" />
-        <option value="$PROJECT_DIR$/server/config/DbConfigManager.js" />
-        <option value="$PROJECT_DIR$/server/controllers/ArticleController.js.map" />
-        <option value="$PROJECT_DIR$/server/controllers/ArticleController.js" />
-        <option value="$PROJECT_DIR$/client/app/product-app.js.map" />
-        <option value="$PROJECT_DIR$/client/app/vendor.js.map" />
-        <option value="$PROJECT_DIR$/client/app/Config.js" />
-        <option value="$PROJECT_DIR$/client/app/vendor.js" />
-        <option value="$PROJECT_DIR$/client/app/app.js" />
-        <option value="$PROJECT_DIR$/client/app/app.module.js.map" />
-        <option value="$PROJECT_DIR$/client/app/Config.js.map" />
-        <option value="$PROJECT_DIR$/client/app/app.js.map" />
-        <option value="$PROJECT_DIR$/client/app/product-app.js" />
-        <option value="$PROJECT_DIR$/client/app/app.module.js" />
-        <option value="$PROJECT_DIR$/client/app/common/AppStore.js" />
-        <option value="$PROJECT_DIR$/client/app/common/AppStore.js.map" />
-        <option value="$PROJECT_DIR$/client/app/models/RegisteredArticle.js.map" />
-        <option value="$PROJECT_DIR$/client/app/models/AppState.js.map" />
-        <option value="$PROJECT_DIR$/client/app/models/Article.js" />
-        <option value="$PROJECT_DIR$/client/app/models/RegisteredItem.js.map" />
-        <option value="$PROJECT_DIR$/client/app/models/AppState.js" />
-        <option value="$PROJECT_DIR$/client/app/models/Article.js.map" />
-        <option value="$PROJECT_DIR$/client/app/models/RegisteredItem.js" />
-        <option value="$PROJECT_DIR$/client/app/models/RegisteredArticle.js" />
-        <option value="$PROJECT_DIR$/client/app/actions/ProcessingModalAction.js" />
-        <option value="$PROJECT_DIR$/client/app/actions/ArticleAction.js.map" />
-        <option value="$PROJECT_DIR$/client/app/actions/ProcessingModalAction.js.map" />
-        <option value="$PROJECT_DIR$/client/app/actions/ArticleAction.js" />
-        <option value="$PROJECT_DIR$/client/app/services/ArticleService.js.map" />
-        <option value="$PROJECT_DIR$/client/app/services/ArticleService.js" />
-        <option value="$PROJECT_DIR$/client/app/services/ProcessingModalService.js.map" />
-        <option value="$PROJECT_DIR$/client/app/services/ProcessingModalService.js" />
-        <option value="$PROJECT_DIR$/client/app/components/view-article.component.js" />
-        <option value="$PROJECT_DIR$/client/app/components/update-article.component.js" />
-        <option value="$PROJECT_DIR$/client/app/components/view-article.component.js.map" />
-        <option value="$PROJECT_DIR$/client/app/components/create-article.component.js.map" />
-        <option value="$PROJECT_DIR$/client/app/components/create-article.component.js" />
-        <option value="$PROJECT_DIR$/client/app/components/app.component.js.map" />
-        <option value="$PROJECT_DIR$/client/app/components/app.component.js" />
-        <option value="$PROJECT_DIR$/client/app/components/article-list.component.js.map" />
-        <option value="$PROJECT_DIR$/client/app/components/article-list.component.js" />
-        <option value="$PROJECT_DIR$/client/app/components/update-article.component.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/app.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/app.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/dao/ArticleDao.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/dao/ArticleDao.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/www/index.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/www/index.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/config/DbConfigManager.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/config/DbConfigManager.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/models/RegisteredArticle.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/models/AppError.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/models/Article.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/models/RegisteredItem.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/models/RegisteredItem.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/models/AppError.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/models/Article.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/models/RegisteredArticle.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/routes/index.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/routes/index.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/services/ArticleService.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/services/ArticleService.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/controllers/ArticleController.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/controllers/ArticleController.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/routes/api/index.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/routes/api/index.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/routes/api/v1/index.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/routes/api/v1/article.js.map" />
+        <option value="$PROJECT_DIR$/chapter-4/server/routes/api/v1/article.js" />
+        <option value="$PROJECT_DIR$/chapter-4/server/routes/api/v1/index.js.map" />
       </list>
     </option>
   </component>
@@ -1160,311 +1154,155 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-3/section5.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-3/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="345">
-            <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/maegaki.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="690">
-            <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/product-app.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app.module.ngfactory/app.module.ngfactory.component.js" />
-    <entry file="file://$PROJECT_DIR$/client/app.module.factory/app.module.factory.component.js" />
-    <entry file="file://$PROJECT_DIR$/client/app.module.factory/app.module.factory.html" />
-    <entry file="file://$PROJECT_DIR$/client/app.module.factory/app.module.factory.scss" />
-    <entry file="file://$PROJECT_DIR$/client/test/test.html" />
-    <entry file="file://$PROJECT_DIR$/client/test1/test1.component.js" />
-    <entry file="file://$PROJECT_DIR$/client/test1/test1.html" />
-    <entry file="file://$PROJECT_DIR$/client/tsconfig-aot.json" />
-    <entry file="file://$PROJECT_DIR$/client/app/components/article-editor.component.html" />
-    <entry file="file://$PROJECT_DIR$/client/app/components/article-editor.component.ts" />
     <entry file="file://$PROJECT_DIR$/client/app/product-app-aot.ts" />
     <entry file="file://$PROJECT_DIR$/client/app/app-aot.ts" />
-    <entry file="file://$PROJECT_DIR$/client/webpack.config.aot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/webpack.config.aot.js" />
     <entry file="file://$PROJECT_DIR$/client/app/components/update-article-page.component.html" />
     <entry file="file://$PROJECT_DIR$/client/app/components/update-article-page.component.ts" />
-    <entry file="file://$PROJECT_DIR$/client/app/Config.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/Config.ts" />
     <entry file="file://$PROJECT_DIR$/client/npm-debug.log" />
-    <entry file="file://$PROJECT_DIR$/client/node_modules/@types/toastr/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/app.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-1/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="315">
-            <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-4/section1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="345">
-            <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-4/section2-2.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="195">
-            <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-4/section2.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="450">
-            <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/node_modules/@types/toastr/index.d.ts" />
+    <entry file="file://$PROJECT_DIR$/client/index.html" />
+    <entry file="file://$PROJECT_DIR$/client/app/app.ts" />
+    <entry file="file://$PROJECT_DIR$/docs/src/chapter-1/index.md" />
+    <entry file="file://$PROJECT_DIR$/server/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/docs/src/chapter-4/section1.md" />
+    <entry file="file://$PROJECT_DIR$/client/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/docs/src/chapter-4/section2-2.md" />
+    <entry file="file://$PROJECT_DIR$/docs/src/chapter-4/section2.md" />
     <entry file="file://$PROJECT_DIR$/docs/note.md" />
-    <entry file="file://$PROJECT_DIR$/client/webpack.config.dev.js">
+    <entry file="file://$PROJECT_DIR$/client/webpack.config.dev.js" />
+    <entry file="file://$PROJECT_DIR$/client/package.json" />
+    <entry file="file://$PROJECT_DIR$/docs/src/chapter-4/index.md" />
+    <entry file="file://$PROJECT_DIR$/docs/src/cover_description.md" />
+    <entry file="file://$PROJECT_DIR$/docs/src/chapter-5/index.md" />
+    <entry file="file://$PROJECT_DIR$/docs/src/author.md" />
+    <entry file="file://$PROJECT_DIR$/docs/src/index.md" />
+    <entry file="file://$PROJECT_DIR$/docs/src/body.md" />
+    <entry file="file://$PROJECT_DIR$/server/routes/api/v1/index.ts" />
+    <entry file="file://$PROJECT_DIR$/server/routes/api/v1/article.ts" />
+    <entry file="file://$PROJECT_DIR$/client/app/components/article-list.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/app/components/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/client/app/services/ArticleService.ts" />
+    <entry file="file://$PROJECT_DIR$/client/app/components/article-list.component.html" />
+    <entry file="file://$PROJECT_DIR$/server/routes/api/index.ts" />
+    <entry file="file://$PROJECT_DIR$/server/routes/index.ts" />
+    <entry file="file://$PROJECT_DIR$/client/app/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/client/helpers.js" />
+    <entry file="file://$PROJECT_DIR$/chapter-2/helloworld.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="55" lean-forward="true" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-4/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="315">
-            <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/chapter-4/server/chapter-4-server.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/cover_description.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/chapter-4/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/chapter-5/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/chapter-4/client/chapter-4-client.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/author.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/chapter-4/client/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/chapter-4/client/webpack.config.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter-4/client/webpack.config.aot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chapter-4/client/npm-debug.log" />
+    <entry file="file://$PROJECT_DIR$/chapter-4/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/src/body.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <first_editor relative-caret-position="165">
+            <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/api/v1/index.ts">
+    <entry file="file://$PROJECT_DIR$/chapter-4/server/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/api/v1/article.ts">
+    <entry file="file://$PROJECT_DIR$/chapter-4/server/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/article-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/services/ArticleService.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        <state relative-caret-position="15">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/78fb6d2e/3fd6a624-b158-4f61-a5ef-51ef1a3b2a6a/sample_crud_app_db.article">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/article-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/api/index.ts">
+    <entry file="file://$PROJECT_DIR$/chapter-4/server/json/db_config.json_bak">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/index.ts">
+    <entry file="file://$PROJECT_DIR$/chapter-4/server/json/db_config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="30">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,6 +1335,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Python 2.7.10 (/usr/bin/pythonw2.7) interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1520,7 +1359,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>docs</last-edited>
+          <last-edited>chapter-4-server</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
