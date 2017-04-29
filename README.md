@@ -10,13 +10,6 @@
 
 [技術書典2](https://techbookfest.org/event/tbf02)
 
-## 本文用ソース
-
-イベントで販売した本のソースとしてワードファイルをおいてあります。
-
-[本文ワードファイル](https://github.com/jsuzuki20120311/start-typescript-note/blob/master/book/body.docx)
-
-
 ## 第2章用ソースコード
 
 [第2章のソースコード](https://github.com/jsuzuki20120311/start-typescript-note/tree/master/chapter-2)
