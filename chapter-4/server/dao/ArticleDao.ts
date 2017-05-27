@@ -1,7 +1,7 @@
 import * as mysql from 'mysql';
 import { Article } from '../models/Article';
 import { RegisteredArticle } from '../models/RegisteredArticle';
-import {AppError} from "../models/AppError";
+import { AppError } from "../models/AppError";
 
 /**
  * 記事データ用Daoクラス
